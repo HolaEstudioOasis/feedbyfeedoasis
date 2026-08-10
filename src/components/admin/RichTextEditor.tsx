@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { blogImageUrl } from "@/lib/blog";
+import { blogImageUrl, storageObjectPath } from "@/lib/blog";
 
 type Props = {
   value: string;
@@ -44,8 +44,10 @@ export default function RichTextEditor({ value, onChange }: Props) {
   const insertImage = async (file: File) => {
     setUploading(true);
     try {
-      const path = `content/${crypto.randomUUID()}-${file.name.replace(/[^\w.-]/g, "_")}`;
-      const { error } = await supabase.storage.from("blog-images").upload(path, file);
+      const path = storageObjectPath("content", file);
+      const { error } = await supabase.storage
+        .from("blog-images")
+        .upload(path, file, { contentType: file.type || undefined, upsert: false });
       if (error) throw error;
       exec("insertImage", blogImageUrl(path));
     } catch (error) {

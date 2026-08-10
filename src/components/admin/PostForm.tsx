@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 import RichTextEditor from "./RichTextEditor";
-import { blogImageUrl, slugify, type BlogPost, type PostStatus } from "@/lib/blog";
+import { blogImageUrl, slugify, storageObjectPath, type BlogPost, type PostStatus } from "@/lib/blog";
 
 type FormState = {
   title: string;
@@ -74,10 +74,10 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
     setUploading(true);
     setError(null);
     try {
-      const path = `featured/${crypto.randomUUID()}-${file.name.replace(/[^\w.-]/g, "_")}`;
+      const path = storageObjectPath("featured", file);
       const { error: uploadError } = await supabase.storage
         .from("blog-images")
-        .upload(path, file);
+        .upload(path, file, { contentType: file.type || undefined, upsert: false });
       if (uploadError) throw uploadError;
       set("featured_image_url", blogImageUrl(path));
     } catch (uploadError) {
