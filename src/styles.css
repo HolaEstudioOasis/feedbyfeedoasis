@@ -1,7 +1,10 @@
+@layer theme, base, components, site, utilities;
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import "./site.css";
+/* Public-site CSS lives in its own layer so Tailwind utilities (used by the
+   admin panel) win over its global element resets like `button { color: inherit }`. */
+@import "./site.css" layer(site);
 
 @custom-variant dark (&:is(.dark *));
 
@@ -70,8 +73,8 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: #162351;
+  --primary-foreground: #f2e7d3;
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
