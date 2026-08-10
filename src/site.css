@@ -1765,12 +1765,16 @@ a.img-placeholder {
   max-width: 760px;
 }
 
-.post-detail-img {
+.post-detail-img,
+.post-detail-placeholder {
+  display: block;
   width: 100%;
+  aspect-ratio: 4 / 2.9;
   border-radius: var(--radius-lg);
   margin-bottom: 40px;
   object-fit: cover;
 }
+
 
 .post-body {
   font-size: 1.05rem;
@@ -1806,10 +1810,13 @@ a.img-placeholder {
 }
 
 .post-body img {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
   border-radius: var(--radius-md);
   margin-top: 24px;
 }
+
 
 .post-body blockquote {
   margin: 28px 0 0;
