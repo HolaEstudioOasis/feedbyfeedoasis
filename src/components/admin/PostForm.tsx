@@ -75,6 +75,7 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
   const uploadFeatured = async (file: File) => {
     setUploading(true);
     setError(null);
+    setUploadNote(null);
     try {
       const path = storageObjectPath("featured", file);
       const { error: uploadError } = await supabase.storage
@@ -82,11 +83,13 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
         .upload(path, file, { contentType: file.type || "application/octet-stream", upsert: false });
       if (uploadError) throw uploadError;
       set("featured_image_url", blogImageUrl(path));
+      setUploadNote("Image uploaded — save the post to apply.");
     } catch (uploadError) {
       setError(uploadError instanceof Error ? uploadError.message : "Upload failed");
     } finally {
       setUploading(false);
     }
+
   };
 
   const save = async (mode: "draft" | "publish" | "schedule") => {
