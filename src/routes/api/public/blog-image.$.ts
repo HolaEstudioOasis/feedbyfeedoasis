@@ -6,7 +6,8 @@ export const Route = createFileRoute("/api/public/blog-image/$")({
     handlers: {
       GET: async ({ params }) => {
         const path = (params as { _splat?: string })._splat ?? "";
-        if (!path || path.includes("..")) {
+        const segments = path.split("/");
+        if (!path || segments.some((segment) => segment === "..")) {
           return new Response("Not found", { status: 404 });
         }
         const { data, error } = await fetchBlogImage(path);
