@@ -77,7 +77,7 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
       const path = storageObjectPath("featured", file);
       const { error: uploadError } = await supabase.storage
         .from("blog-images")
-        .upload(path, file, { contentType: file.type || undefined, upsert: false });
+        .upload(path, file, { contentType: file.type || "application/octet-stream", upsert: false });
       if (uploadError) throw uploadError;
       set("featured_image_url", blogImageUrl(path));
     } catch (uploadError) {

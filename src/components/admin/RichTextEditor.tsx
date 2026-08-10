@@ -47,7 +47,7 @@ export default function RichTextEditor({ value, onChange }: Props) {
       const path = storageObjectPath("content", file);
       const { error } = await supabase.storage
         .from("blog-images")
-        .upload(path, file, { contentType: file.type || undefined, upsert: false });
+        .upload(path, file, { contentType: file.type || "application/octet-stream", upsert: false });
       if (error) throw error;
       exec("insertImage", blogImageUrl(path));
     } catch (error) {
