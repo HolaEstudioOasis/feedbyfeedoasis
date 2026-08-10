@@ -10,33 +10,208 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminUsersRouteImport } from './routes/admin.users'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ServicesLactationConsultationsRouteImport } from './routes/services.lactation-consultations'
+import { Route as ServicesPackagesRouteImport } from './routes/services.packages'
+import { Route as ServicesPrenatalServicesRouteImport } from './routes/services.prenatal-services'
+import { Route as AdminPostsIdRouteImport } from './routes/admin.posts.$id'
+import { Route as AdminPostsNewRouteImport } from './routes/admin.posts.new'
+import { Route as ApiPublicBlogImageSplatRouteImport } from './routes/api/public/blog-image.$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminUsersRoute = AdminUsersRouteImport.update({
+  id: '/admin/users',
+  path: '/admin/users',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesLactationConsultationsRoute =
+  ServicesLactationConsultationsRouteImport.update({
+    id: '/services/lactation-consultations',
+    path: '/services/lactation-consultations',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesPackagesRoute = ServicesPackagesRouteImport.update({
+  id: '/services/packages',
+  path: '/services/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesPrenatalServicesRoute =
+  ServicesPrenatalServicesRouteImport.update({
+    id: '/services/prenatal-services',
+    path: '/services/prenatal-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AdminPostsIdRoute = AdminPostsIdRouteImport.update({
+  id: '/admin/posts/$id',
+  path: '/admin/posts/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPostsNewRoute = AdminPostsNewRouteImport.update({
+  id: '/admin/posts/new',
+  path: '/admin/posts/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicBlogImageSplatRoute = ApiPublicBlogImageSplatRouteImport.update({
+  id: '/api/public/blog-image/$',
+  path: '/api/public/blog-image/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/users': typeof AdminUsersRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/services/lactation-consultations': typeof ServicesLactationConsultationsRoute
+  '/services/packages': typeof ServicesPackagesRoute
+  '/services/prenatal-services': typeof ServicesPrenatalServicesRoute
+  '/admin/': typeof AdminIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/admin/posts/$id': typeof AdminPostsIdRoute
+  '/admin/posts/new': typeof AdminPostsNewRoute
+  '/api/public/blog-image/$': typeof ApiPublicBlogImageSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/users': typeof AdminUsersRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/services/lactation-consultations': typeof ServicesLactationConsultationsRoute
+  '/services/packages': typeof ServicesPackagesRoute
+  '/services/prenatal-services': typeof ServicesPrenatalServicesRoute
+  '/admin': typeof AdminIndexRoute
+  '/blog': typeof BlogIndexRoute
+  '/admin/posts/$id': typeof AdminPostsIdRoute
+  '/admin/posts/new': typeof AdminPostsNewRoute
+  '/api/public/blog-image/$': typeof ApiPublicBlogImageSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/users': typeof AdminUsersRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/services/lactation-consultations': typeof ServicesLactationConsultationsRoute
+  '/services/packages': typeof ServicesPackagesRoute
+  '/services/prenatal-services': typeof ServicesPrenatalServicesRoute
+  '/admin/': typeof AdminIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/admin/posts/$id': typeof AdminPostsIdRoute
+  '/admin/posts/new': typeof AdminPostsNewRoute
+  '/api/public/blog-image/$': typeof ApiPublicBlogImageSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/admin/login'
+    | '/admin/users'
+    | '/blog/$slug'
+    | '/services/lactation-consultations'
+    | '/services/packages'
+    | '/services/prenatal-services'
+    | '/admin/'
+    | '/blog/'
+    | '/admin/posts/$id'
+    | '/admin/posts/new'
+    | '/api/public/blog-image/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/admin/login'
+    | '/admin/users'
+    | '/blog/$slug'
+    | '/services/lactation-consultations'
+    | '/services/packages'
+    | '/services/prenatal-services'
+    | '/admin'
+    | '/blog'
+    | '/admin/posts/$id'
+    | '/admin/posts/new'
+    | '/api/public/blog-image/$'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/admin/login'
+    | '/admin/users'
+    | '/blog/$slug'
+    | '/services/lactation-consultations'
+    | '/services/packages'
+    | '/services/prenatal-services'
+    | '/admin/'
+    | '/blog/'
+    | '/admin/posts/$id'
+    | '/admin/posts/new'
+    | '/api/public/blog-image/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  AdminLoginRoute: typeof AdminLoginRoute
+  AdminUsersRoute: typeof AdminUsersRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  ServicesLactationConsultationsRoute: typeof ServicesLactationConsultationsRoute
+  ServicesPackagesRoute: typeof ServicesPackagesRoute
+  ServicesPrenatalServicesRoute: typeof ServicesPrenatalServicesRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  AdminPostsIdRoute: typeof AdminPostsIdRoute
+  AdminPostsNewRoute: typeof AdminPostsNewRoute
+  ApiPublicBlogImageSplatRoute: typeof ApiPublicBlogImageSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +223,116 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/users': {
+      id: '/admin/users'
+      path: '/admin/users'
+      fullPath: '/admin/users'
+      preLoaderRoute: typeof AdminUsersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/lactation-consultations': {
+      id: '/services/lactation-consultations'
+      path: '/services/lactation-consultations'
+      fullPath: '/services/lactation-consultations'
+      preLoaderRoute: typeof ServicesLactationConsultationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/packages': {
+      id: '/services/packages'
+      path: '/services/packages'
+      fullPath: '/services/packages'
+      preLoaderRoute: typeof ServicesPackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/prenatal-services': {
+      id: '/services/prenatal-services'
+      path: '/services/prenatal-services'
+      fullPath: '/services/prenatal-services'
+      preLoaderRoute: typeof ServicesPrenatalServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/posts/$id': {
+      id: '/admin/posts/$id'
+      path: '/admin/posts/$id'
+      fullPath: '/admin/posts/$id'
+      preLoaderRoute: typeof AdminPostsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/posts/new': {
+      id: '/admin/posts/new'
+      path: '/admin/posts/new'
+      fullPath: '/admin/posts/new'
+      preLoaderRoute: typeof AdminPostsNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/blog-image/$': {
+      id: '/api/public/blog-image/$'
+      path: '/api/public/blog-image/$'
+      fullPath: '/api/public/blog-image/$'
+      preLoaderRoute: typeof ApiPublicBlogImageSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  AdminUsersRoute: AdminUsersRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  ServicesLactationConsultationsRoute: ServicesLactationConsultationsRoute,
+  ServicesPackagesRoute: ServicesPackagesRoute,
+  ServicesPrenatalServicesRoute: ServicesPrenatalServicesRoute,
+  AdminIndexRoute: AdminIndexRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  AdminPostsIdRoute: AdminPostsIdRoute,
+  AdminPostsNewRoute: AdminPostsNewRoute,
+  ApiPublicBlogImageSplatRoute: ApiPublicBlogImageSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
