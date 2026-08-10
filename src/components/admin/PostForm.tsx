@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 import RichTextEditor from "./RichTextEditor";
@@ -47,6 +47,8 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
   const [slugTouched, setSlugTouched] = useState(false);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [uploadNote, setUploadNote] = useState<string | null>(null);
+  const featuredRef = useRef<HTMLInputElement>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -73,6 +75,7 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
   const uploadFeatured = async (file: File) => {
     setUploading(true);
     setError(null);
+    setUploadNote(null);
     try {
       const path = storageObjectPath("featured", file);
       const { error: uploadError } = await supabase.storage
@@ -80,11 +83,13 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
         .upload(path, file, { contentType: file.type || "application/octet-stream", upsert: false });
       if (uploadError) throw uploadError;
       set("featured_image_url", blogImageUrl(path));
+      setUploadNote("Image uploaded — save the post to apply.");
     } catch (uploadError) {
       setError(uploadError instanceof Error ? uploadError.message : "Upload failed");
     } finally {
       setUploading(false);
     }
+
   };
 
   const save = async (mode: "draft" | "publish" | "schedule") => {
@@ -222,31 +227,57 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
               {form.featured_image_url ? (
                 <img
                   src={form.featured_image_url}
-                  alt=""
-                  className="mt-2 aspect-video w-full rounded-md object-cover"
+                  alt="Featured"
+                  className="mt-2 aspect-video w-full rounded-md border border-border object-cover"
                 />
+              ) : (
+                <div className="mt-2 flex aspect-video w-full items-center justify-center rounded-md border border-dashed border-border text-xs text-muted-foreground">
+                  No featured image
+                </div>
+              )}
+              <div className="mt-2 flex flex-wrap items-center gap-2">
+                <button
+                  type="button"
+                  disabled={uploading}
+                  className="rounded-md border border-border px-3 py-1.5 text-xs font-medium text-foreground disabled:opacity-60"
+                  onClick={() => featuredRef.current?.click()}
+                >
+                  {uploading
+                    ? "Uploading…"
+                    : form.featured_image_url
+                      ? "Replace image"
+                      : "Upload image"}
+                </button>
+                {form.featured_image_url ? (
+                  <button
+                    type="button"
+                    disabled={uploading}
+                    className="rounded-md border border-border px-3 py-1.5 text-xs font-medium text-foreground disabled:opacity-60"
+                    onClick={() => {
+                      set("featured_image_url", "");
+                      setUploadNote("Image removed — save the post to apply.");
+                    }}
+                  >
+                    Remove image
+                  </button>
+                ) : null}
+              </div>
+              {uploadNote ? (
+                <p className="mt-2 text-xs text-muted-foreground">{uploadNote}</p>
               ) : null}
               <input
+                ref={featuredRef}
                 type="file"
                 accept="image/*"
-                className="mt-2 text-sm"
+                className="hidden"
                 onChange={(event) => {
                   const file = event.target.files?.[0];
                   event.target.value = "";
                   if (file) void uploadFeatured(file);
                 }}
               />
-              {uploading ? <p className="text-xs text-muted-foreground">Uploading…</p> : null}
-              {form.featured_image_url ? (
-                <button
-                  type="button"
-                  className="mt-2 text-xs text-muted-foreground underline"
-                  onClick={() => set("featured_image_url", "")}
-                >
-                  Remove image
-                </button>
-              ) : null}
             </div>
+
 
             <div>
               <label className={label} htmlFor="category">Category</label>
