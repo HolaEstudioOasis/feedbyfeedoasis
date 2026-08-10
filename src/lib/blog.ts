@@ -54,3 +54,12 @@ export function formatDateTime(value: string | null) {
     minute: "2-digit",
   });
 }
+
+/** Safe, unique storage object path: `<folder>/<uuid>.<ext>` (no spaces, parens or extra dots). */
+export function storageObjectPath(folder: "featured" | "content", file: File) {
+  const match = /\.([A-Za-z0-9]{1,5})$/.exec(file.name);
+  const fromName = match?.[1]?.toLowerCase();
+  const fromType = file.type.split("/")[1]?.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const ext = fromName || fromType || "bin";
+  return `${folder}/${crypto.randomUUID()}.${ext}`;
+}
