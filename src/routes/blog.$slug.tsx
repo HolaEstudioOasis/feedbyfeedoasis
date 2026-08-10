@@ -76,7 +76,10 @@ function PostDetail() {
                 src={post.featured_image_url}
                 alt={post.title}
               />
-            ) : null}
+            ) : (
+              <div className="img-placeholder post-detail-placeholder" />
+            )}
+
 
             <div
               className="post-body"
