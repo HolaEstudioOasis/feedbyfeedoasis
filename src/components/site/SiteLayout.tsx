@@ -20,13 +20,8 @@ function useLegacyPageBehaviors() {
     };
     triggers.forEach((trigger) => trigger.addEventListener("click", onTriggerClick));
 
-    const forms = Array.from(document.querySelectorAll<HTMLFormElement>(".newsletter-form"));
-    const onSubmit = (event: Event) => event.preventDefault();
-    forms.forEach((form) => form.addEventListener("submit", onSubmit));
-
     return () => {
       triggers.forEach((trigger) => trigger.removeEventListener("click", onTriggerClick));
-      forms.forEach((form) => form.removeEventListener("submit", onSubmit));
     };
   }, []);
 }
