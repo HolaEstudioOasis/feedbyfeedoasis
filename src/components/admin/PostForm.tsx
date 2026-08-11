@@ -41,10 +41,28 @@ function emptyForm(): FormState {
   };
 }
 
+function formFromPost(post?: BlogPost): FormState {
+  if (!post) return emptyForm();
+  return {
+    title: post.title,
+    slug: post.slug,
+    content: post.content ?? "",
+    excerpt: post.excerpt ?? "",
+    featured_image_url: post.featured_image_url ?? "",
+    category: post.category ?? "",
+    tags: (post.tags ?? []).join(", "),
+    meta_title: post.meta_title ?? "",
+    meta_description: post.meta_description ?? "",
+    status: post.status,
+    published_at: toLocalInput(post.published_at),
+  };
+}
+
 export default function PostForm({ post, userId }: { post?: BlogPost; userId: string }) {
   const navigate = useNavigate();
-  const [form, setForm] = useState<FormState>(emptyForm);
-  const [slugTouched, setSlugTouched] = useState(false);
+  const [form, setForm] = useState<FormState>(() => formFromPost(post));
+  const originalContent = useRef<string>(post?.content ?? "");
+  const [slugTouched, setSlugTouched] = useState(Boolean(post));
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadNote, setUploadNote] = useState<string | null>(null);
@@ -53,21 +71,11 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
 
   useEffect(() => {
     if (!post) return;
+    originalContent.current = post.content ?? "";
     setSlugTouched(true);
-    setForm({
-      title: post.title,
-      slug: post.slug,
-      content: post.content ?? "",
-      excerpt: post.excerpt ?? "",
-      featured_image_url: post.featured_image_url ?? "",
-      category: post.category ?? "",
-      tags: (post.tags ?? []).join(", "),
-      meta_title: post.meta_title ?? "",
-      meta_description: post.meta_description ?? "",
-      status: post.status,
-      published_at: toLocalInput(post.published_at),
-    });
+    setForm(formFromPost(post));
   }, [post]);
+
 
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -97,6 +105,15 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
     setError(null);
     try {
       if (!form.title.trim()) throw new Error("A title is required");
+
+      const isEmptyHtml = (html: string) =>
+        html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim() === "" &&
+        !/<(img|iframe|video)\b/i.test(html);
+      if (isEmptyHtml(form.content) && !isEmptyHtml(originalContent.current)) {
+        throw new Error(
+          "The content editor is empty but this post already has content. Reload the page before saving to avoid losing it.",
+        );
+      }
 
       let status: PostStatus = "draft";
       let publishedAt: string | null = null;

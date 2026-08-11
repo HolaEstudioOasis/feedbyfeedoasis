@@ -23,12 +23,14 @@ export default function RichTextEditor({ value, onChange }: Props) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
 
-  // Content is uncontrolled after mount; the parent remounts (via key) when
-  // it loads a different post.
+  // Content is uncontrolled while editing, but we hydrate it whenever the
+  // incoming value arrives late (async post load) or differs after a remount.
   useEffect(() => {
-    if (ref.current) ref.current.innerHTML = value;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    const el = ref.current;
+    if (!el) return;
+    if (document.activeElement === el) return;
+    if (el.innerHTML !== value) el.innerHTML = value;
+  }, [value]);
 
   const exec = (command: string, arg?: string) => {
     ref.current?.focus();
