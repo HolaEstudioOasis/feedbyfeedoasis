@@ -86,6 +86,12 @@ input {
   padding-inline: 24px;
 }
 
+@media (min-width: 1025px) {
+  .container {
+    padding-inline: 56px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -505,7 +511,7 @@ a.img-placeholder {
 
 .section-head p.lead {
   margin-top: 16px;
-  max-width: 60ch;
+  max-width: 66ch;
 }
 
 /* ==========================================================================
@@ -604,6 +610,14 @@ a.img-placeholder {
 .reviews {
   background: var(--azul-noche);
   color: var(--text-on-dark);
+}
+
+.reviews .section-head {
+  max-width: 900px;
+}
+
+.reviews .section-head h2 {
+  max-width: none;
 }
 
 .reviews .section-head h2,
@@ -813,7 +827,7 @@ a.img-placeholder {
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 40px;
-  align-items: start;
+  align-items: center;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(242, 231, 211, 0.18);
 }
@@ -821,6 +835,7 @@ a.img-placeholder {
 .footer-logo {
   flex-shrink: 0;
   display: inline-flex;
+  align-self: center;
 }
 
 .footer-logo img,
@@ -857,11 +872,12 @@ a.img-placeholder {
 }
 
 .footer-newsletter {
-  max-width: 320px;
+  max-width: 400px;
 }
 
 .footer-newsletter p {
   font-size: 0.88rem;
+  max-width: 52ch;
   color: var(--text-muted-on-dark);
   margin-bottom: 14px;
 }

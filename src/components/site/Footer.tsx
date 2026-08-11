@@ -13,7 +13,6 @@ export default function Footer() {
           <nav className="footer-nav" aria-label="Footer">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="/services/prenatal-services">Services</Link>
             <Link to="/blog">Blog</Link>
             <Link to="/contact">Contact</Link>
           </nav>
@@ -25,7 +24,7 @@ export default function Footer() {
             </p>
             <form
               className="newsletter-form"
-              action="https://assets.mailerlite.com/jsonp/2567687/forms/195434292133758278/subscribe"
+              action="https://assets.mailerlite.com/jsonp/2570708/forms/195544417940014318/subscribe"
               method="post"
               target="_blank"
             >

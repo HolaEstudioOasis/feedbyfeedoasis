@@ -104,7 +104,7 @@ function PostDetail() {
           <div className="container">
             <div className="cta-content">
               <p className="eyebrow">Ready to start?</p>
-              <h2>Explore personalized support for your feeding journey.</h2>
+              <h2>Explore personalized support for your feeding journey</h2>
               <a href="/services/prenatal-services" className="btn btn-cream">Explore Our Services</a>
               <p className="cta-footnote">Have questions? Contact us at <a href="/contact">hello@feedbyfeed.com</a></p>
             </div>
