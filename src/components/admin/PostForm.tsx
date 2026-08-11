@@ -41,10 +41,28 @@ function emptyForm(): FormState {
   };
 }
 
+function formFromPost(post?: BlogPost): FormState {
+  if (!post) return emptyForm();
+  return {
+    title: post.title,
+    slug: post.slug,
+    content: post.content ?? "",
+    excerpt: post.excerpt ?? "",
+    featured_image_url: post.featured_image_url ?? "",
+    category: post.category ?? "",
+    tags: (post.tags ?? []).join(", "),
+    meta_title: post.meta_title ?? "",
+    meta_description: post.meta_description ?? "",
+    status: post.status,
+    published_at: toLocalInput(post.published_at),
+  };
+}
+
 export default function PostForm({ post, userId }: { post?: BlogPost; userId: string }) {
   const navigate = useNavigate();
-  const [form, setForm] = useState<FormState>(emptyForm);
-  const [slugTouched, setSlugTouched] = useState(false);
+  const [form, setForm] = useState<FormState>(() => formFromPost(post));
+  const originalContent = useRef<string>(post?.content ?? "");
+  const [slugTouched, setSlugTouched] = useState(Boolean(post));
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadNote, setUploadNote] = useState<string | null>(null);
