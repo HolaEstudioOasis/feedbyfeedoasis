@@ -71,21 +71,11 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
 
   useEffect(() => {
     if (!post) return;
+    originalContent.current = post.content ?? "";
     setSlugTouched(true);
-    setForm({
-      title: post.title,
-      slug: post.slug,
-      content: post.content ?? "",
-      excerpt: post.excerpt ?? "",
-      featured_image_url: post.featured_image_url ?? "",
-      category: post.category ?? "",
-      tags: (post.tags ?? []).join(", "),
-      meta_title: post.meta_title ?? "",
-      meta_description: post.meta_description ?? "",
-      status: post.status,
-      published_at: toLocalInput(post.published_at),
-    });
+    setForm(formFromPost(post));
   }, [post]);
+
 
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((prev) => ({ ...prev, [key]: value }));
