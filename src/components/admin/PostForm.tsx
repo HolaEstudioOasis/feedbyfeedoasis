@@ -106,6 +106,15 @@ export default function PostForm({ post, userId }: { post?: BlogPost; userId: st
     try {
       if (!form.title.trim()) throw new Error("A title is required");
 
+      const isEmptyHtml = (html: string) =>
+        html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim() === "" &&
+        !/<(img|iframe|video)\b/i.test(html);
+      if (isEmptyHtml(form.content) && !isEmptyHtml(originalContent.current)) {
+        throw new Error(
+          "The content editor is empty but this post already has content. Reload the page before saving to avoid losing it.",
+        );
+      }
+
       let status: PostStatus = "draft";
       let publishedAt: string | null = null;
 
