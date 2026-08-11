@@ -92,22 +92,19 @@ function Blog() {
                   <p>Get expert, judgment-free feeding tips and parenthood insights delivered to your inbox monthly.</p>
                 </div>
 
-                <form className="newsletter-form blog-newsletter-form">
-                  <div className="newsletter-form-row">
-                    <div>
-                      <label className="field-label" htmlFor="blog-first-name">Name</label>
-                      <input type="text" id="blog-first-name" name="firstName" placeholder="Name" required={true} />
-                    </div>
-                    <div>
-                      <label className="field-label" htmlFor="blog-last-name">Last name</label>
-                      <input type="text" id="blog-last-name" name="lastName" placeholder="Last name" required={true} />
-                    </div>
-                  </div>
+                <form
+                  className="newsletter-form blog-newsletter-form"
+                  action="https://assets.mailerlite.com/jsonp/2567687/forms/195434292133758278/subscribe"
+                  method="post"
+                  target="_blank"
+                >
                   <div className="newsletter-field">
                     <label className="field-label" htmlFor="blog-email">Email</label>
-                    <input type="email" id="blog-email" name="email" placeholder="Email" required={true} />
+                    <input type="email" id="blog-email" name="fields[email]" placeholder="Email" autoComplete="email" required={true} />
                   </div>
                   <button type="submit" className="btn btn-dark">Join</button>
+                  <input type="hidden" name="ml-submit" value="1" />
+                  <input type="hidden" name="anticsrf" value="true" />
                 </form>
               </div>
             </section>
