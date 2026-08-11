@@ -23,12 +23,26 @@ export default function Footer() {
               Get expert, judgment-free feeding tips and parenthood insights delivered to your
               inbox monthly.
             </p>
-            <form className="newsletter-form" onSubmit={(event) => event.preventDefault()}>
+            <form
+              className="newsletter-form"
+              action="https://assets.mailerlite.com/jsonp/2567687/forms/195434292133758278/subscribe"
+              method="post"
+              target="_blank"
+            >
               <label htmlFor="newsletter-email" className="visually-hidden">
                 Email address
               </label>
-              <input type="email" id="newsletter-email" placeholder="Type here..." required />
+              <input
+                type="email"
+                id="newsletter-email"
+                name="fields[email]"
+                placeholder="Type here..."
+                autoComplete="email"
+                required
+              />
               <button type="submit">Subscribe</button>
+              <input type="hidden" name="ml-submit" value="1" />
+              <input type="hidden" name="anticsrf" value="true" />
             </form>
           </div>
         </div>
