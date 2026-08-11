@@ -94,7 +94,7 @@ function Blog() {
 
                 <form
                   className="newsletter-form blog-newsletter-form"
-                  action="https://assets.mailerlite.com/jsonp/2567687/forms/195434292133758278/subscribe"
+                  action="https://assets.mailerlite.com/jsonp/2570708/forms/195544417940014318/subscribe"
                   method="post"
                   target="_blank"
                 >
@@ -114,7 +114,7 @@ function Blog() {
               <div className="container">
                 <div className="cta-content">
                   <p className="eyebrow">Ready to start?</p>
-                  <h2>Explore personalized support for your feeding journey.</h2>
+                  <h2>Explore personalized support for your feeding journey</h2>
                   <a href="/services/prenatal-services" className="btn btn-cream">Explore Our Services</a>
                   <p className="cta-footnote">Have questions? Contact us at <a href="/contact">hello@feedbyfeed.com</a></p>
                 </div>

@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             <form
               className="newsletter-form"
-              action="https://assets.mailerlite.com/jsonp/2567687/forms/195434292133758278/subscribe"
+              action="https://assets.mailerlite.com/jsonp/2570708/forms/195544417940014318/subscribe"
               method="post"
               target="_blank"
             >
