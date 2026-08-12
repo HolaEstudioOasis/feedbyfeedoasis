@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
+import about1Asset from "@/assets/about-1.webp.asset.json";
+import about2Asset from "@/assets/about-2.webp.asset.json";
 
 const title = "About Alicia | Feed by Feed";
 const description = "Meet Alicia, IBCLC and founder of Feed by Feed — a steady presence built around the whole family.";
@@ -33,7 +35,7 @@ function About() {
             <section className="story section">
               <div className="container story-grid">
                 <div className="story-media">
-                  <div className="img-placeholder"></div>
+                  <img src={about1Asset.url} alt="Alicia breastfeeding her toddler" className="story-img" loading="lazy" />
                 </div>
                 <div className="story-content">
                   <h2>The heart behind Feed by Feed</h2>
@@ -56,7 +58,7 @@ function About() {
                   <p>Feeding a baby isn't something a mother should carry alone. It's something a family learns together.</p>
                 </div>
                 <div className="story-media">
-                  <div className="img-placeholder"></div>
+                  <img src={about2Asset.url} alt="Alicia with her husband and children" className="story-img" loading="lazy" />
                 </div>
               </div>
             </section>
