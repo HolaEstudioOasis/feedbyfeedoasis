@@ -594,10 +594,24 @@ a.img-placeholder {
   text-align: center;
 }
 
-.service-card .img-placeholder {
+.service-card .img-placeholder,
+.service-card-img-link {
   aspect-ratio: 4 / 3.4;
   border-radius: var(--radius-md);
+  overflow: hidden;
 }
+
+.service-card-img-link {
+  display: block;
+  width: 100%;
+}
+
+.service-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .service-card h3 {
   margin-top: 22px;
