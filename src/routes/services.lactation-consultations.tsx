@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
+import lactation1 from "@/assets/lactation-1.webp.asset.json";
+import lactation2 from "@/assets/lactation-2.webp.asset.json";
+import lactation3 from "@/assets/lactation-3.webp.asset.json";
 
 const title = "Lactation Consultations | Feed by Feed";
 const description = "Support for families navigating breastfeeding, pumping, bottle feeding, and other feeding challenges.";
@@ -60,7 +63,7 @@ function LactationConsultations() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img className="package-img" src={lactation1.url} alt="In-home lactation consultation with newborn breastfeeding" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
@@ -90,7 +93,7 @@ function LactationConsultations() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img className="package-img" src={lactation2.url} alt="Follow-up lactation consultation, baby nursing" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
@@ -120,7 +123,7 @@ function LactationConsultations() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img className="package-img" src={lactation3.url} alt="Virtual lactation consultation, parent feeding baby at desk" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
