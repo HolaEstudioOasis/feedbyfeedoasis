@@ -77,7 +77,7 @@ function Index() {
                         <img src={prenatalHomeAsset.url} alt="Prenatal services" className="service-card-img img-placeholder--zoom" loading="lazy" />
                       </a>
                     </div>
-                    <h3>Prenatal services</h3>
+                    <h3>Prenatal Services</h3>
                     <a href="/services/prenatal-services" className="btn btn-primary">More info</a>
                   </article>
 
