@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
 import aliciaIntroAsset from "@/assets/alicia-intro.webp.asset.json";
+import prenatalHomeAsset from "@/assets/Prenatal_Home.webp.asset.json";
+
 
 const title = "Feed by Feed | Lactation Consulting & Feeding Support";
 const description = "Personalized clinical support for breastfeeding, pumping, and infant nutrition in the comfort of your home.";
@@ -71,7 +73,9 @@ function Index() {
                 <div className="services-grid">
                   <article className="service-card">
                     <div className="zoom-frame">
-                      <a href="/services/prenatal-services" className="img-placeholder img-placeholder--zoom" aria-label="Learn more about Prenatal services"></a>
+                      <a href="/services/prenatal-services" className="service-card-img-link" aria-label="Learn more about Prenatal services">
+                        <img src={prenatalHomeAsset.url} alt="Prenatal services" className="service-card-img img-placeholder--zoom" loading="lazy" />
+                      </a>
                     </div>
                     <h3>Prenatal services</h3>
                     <a href="/services/prenatal-services" className="btn btn-primary">More info</a>
