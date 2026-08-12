@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
+import packages1 from "@/assets/packages-1.webp.asset.json";
+import packages2 from "@/assets/packages-2.webp.asset.json";
+import packages3 from "@/assets/packages-3.webp.asset.json";
 
 const title = "Packages | Feed by Feed";
 const description = "Lactation and infant feeding support packages combining prenatal preparation, postpartum consultations, and follow-up care.";
@@ -57,7 +60,7 @@ function Packages() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img className="package-img" src={packages1.url} alt="Parents holding their newborn baby" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
@@ -84,7 +87,7 @@ function Packages() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img className="package-img" src={packages2.url} alt="Family attending a virtual feeding consultation" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
@@ -109,7 +112,7 @@ function Packages() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img className="package-img" src={packages3.url} alt="Baby being spoon-fed solids in a high chair" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
