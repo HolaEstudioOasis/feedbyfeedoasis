@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
+import prenatal1Asset from "@/assets/prenatal-1.webp.asset.json";
+import prenatal2Asset from "@/assets/prenatal-2.webp.asset.json";
+import prenatal3Asset from "@/assets/prenatal-3.webp.asset.json";
 
 const title = "Prenatal Services | Feed by Feed";
 const description = "Feel informed, prepared, and confident before your baby's arrival with Feed by Feed's prenatal breastfeeding services.";
