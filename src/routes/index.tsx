@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
 import aliciaIntroAsset from "@/assets/alicia-intro.webp.asset.json";
 import prenatalHomeAsset from "@/assets/Prenatal_Home.webp.asset.json";
+import lactationHomeAsset from "@/assets/lactation-home.webp.asset.json";
+import packagesHomeAsset from "@/assets/packages-home.webp.asset.json";
 
 
 const title = "Feed by Feed | Lactation Consulting & Feeding Support";
@@ -83,7 +85,9 @@ function Index() {
 
                   <article className="service-card">
                     <div className="zoom-frame">
-                      <a href="/services/lactation-consultations" className="img-placeholder img-placeholder--zoom" aria-label="Learn more about Lactation Consultations"></a>
+                      <a href="/services/lactation-consultations" className="service-card-img-link" aria-label="Learn more about Lactation Consultations">
+                        <img src={lactationHomeAsset.url} alt="Lactation consultations" className="service-card-img img-placeholder--zoom" loading="lazy" />
+                      </a>
                     </div>
                     <h3>Lactation Consultations</h3>
                     <a href="/services/lactation-consultations" className="btn btn-primary">More info</a>
@@ -91,7 +95,9 @@ function Index() {
 
                   <article className="service-card">
                     <div className="zoom-frame">
-                      <a href="/services/packages" className="img-placeholder img-placeholder--zoom" aria-label="Learn more about Packages"></a>
+                      <a href="/services/packages" className="service-card-img-link" aria-label="Learn more about Packages">
+                        <img src={packagesHomeAsset.url} alt="Packages" className="service-card-img img-placeholder--zoom" loading="lazy" />
+                      </a>
                     </div>
                     <h3>Packages</h3>
                     <a href="/services/packages" className="btn btn-primary">More info</a>
