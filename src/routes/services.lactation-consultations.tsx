@@ -55,7 +55,7 @@ function LactationConsultations() {
                       </div>
                       <div>
                         <p className="package-meta-label">Price</p>
-                        <p className="package-meta-value">$275</p>
+                        <p className="package-meta-value">$275 CAD</p>
                       </div>
                     </div>
                   </div>
@@ -85,7 +85,7 @@ function LactationConsultations() {
                       </div>
                       <div>
                         <p className="package-meta-label">Price</p>
-                        <p className="package-meta-value">$225</p>
+                        <p className="package-meta-value">$225 CAD</p>
                       </div>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ function LactationConsultations() {
                       </div>
                       <div>
                         <p className="package-meta-label">Price</p>
-                        <p className="package-meta-value">$150</p>
+                        <p className="package-meta-value">$150 CAD</p>
                       </div>
                     </div>
                   </div>
@@ -142,6 +142,28 @@ function LactationConsultations() {
                   <div className="note-card">
                     <p>Payment can be made by cash or e-transfer.</p>
                   </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Explore other services */}
+            <section className="service-nav section">
+              <div className="container">
+                <div className="section-head">
+                  <h2>Where would you like to go next?</h2>
+                  <p className="lead">Whether you're preparing for baby's arrival or looking for continued support, we're here for the next step.</p>
+                </div>
+                <div className="service-nav-grid">
+                  <article className="service-nav-card">
+                    <h3>Preparing before your baby arrives?</h3>
+                    <p>Get ready for breastfeeding with prenatal consultations and classes designed for expecting families.</p>
+                    <a href="/services/prenatal-services" className="btn btn-outline">Explore Prenatal Services →</a>
+                  </article>
+                  <article className="service-nav-card">
+                    <h3>Want support beyond one consultation?</h3>
+                    <p>Explore packages that combine prenatal preparation, lactation care, and follow-up support.</p>
+                    <a href="/services/packages" className="btn btn-outline">Explore Packages →</a>
+                  </article>
                 </div>
               </div>
             </section>

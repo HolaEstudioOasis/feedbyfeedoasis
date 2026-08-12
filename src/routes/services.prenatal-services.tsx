@@ -53,7 +53,7 @@ function PrenatalServices() {
                       </div>
                       <div>
                         <p className="package-meta-label">Price</p>
-                        <p className="package-meta-value">$250</p>
+                        <p className="package-meta-value">$250 CAD</p>
                       </div>
                     </div>
                   </div>
@@ -83,7 +83,7 @@ function PrenatalServices() {
                       </div>
                       <div>
                         <p className="package-meta-label">Price</p>
-                        <p className="package-meta-value">$150</p>
+                        <p className="package-meta-value">$150 CAD</p>
                       </div>
                     </div>
                   </div>
@@ -113,7 +113,7 @@ function PrenatalServices() {
                       </div>
                       <div>
                         <p className="package-meta-label">Price</p>
-                        <p className="package-meta-value">$150 per couple</p>
+                        <p className="package-meta-value">$150 CAD per couple</p>
                       </div>
                     </div>
                   </div>
@@ -140,6 +140,28 @@ function PrenatalServices() {
                   <div className="note-card">
                     <p>Payment can be made by cash or e-transfer.</p>
                   </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Explore other services */}
+            <section className="service-nav section">
+              <div className="container">
+                <div className="section-head">
+                  <h2>Looking for support beyond pregnancy?</h2>
+                  <p className="lead">Explore the options available for your family's feeding journey.</p>
+                </div>
+                <div className="service-nav-grid">
+                  <article className="service-nav-card">
+                    <h3>Need support after your baby arrives?</h3>
+                    <p>Breastfeeding and infant feeding support for latch, milk supply, pumping, bottle feeding, and other feeding concerns.</p>
+                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation Consultations →</a>
+                  </article>
+                  <article className="service-nav-card">
+                    <h3>Looking for ongoing support?</h3>
+                    <p>Combine prenatal preparation and postpartum care for continued support as your feeding journey evolves.</p>
+                    <a href="/services/packages" className="btn btn-outline">Explore Packages →</a>
+                  </article>
                 </div>
               </div>
             </section>
