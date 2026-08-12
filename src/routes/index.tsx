@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
-import aliciaIntroAsset from "@/assets/alicia-intro.png.asset.json";
+import aliciaIntroAsset from "@/assets/alicia-intro.webp.asset.json";
 
 const title = "Feed by Feed | Lactation Consulting & Feeding Support";
 const description = "Personalized clinical support for breastfeeding, pumping, and infant nutrition in the comfort of your home.";
