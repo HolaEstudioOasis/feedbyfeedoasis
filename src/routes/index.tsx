@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
 import aliciaIntroAsset from "@/assets/alicia-intro.webp.asset.json";
 import prenatalHomeAsset from "@/assets/Prenatal_Home.webp.asset.json";
+import lactationHomeAsset from "@/assets/lactation-home.webp.asset.json";
+import packagesHomeAsset from "@/assets/packages-home.webp.asset.json";
 
 
 const title = "Feed by Feed | Lactation Consulting & Feeding Support";
