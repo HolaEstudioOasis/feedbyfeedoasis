@@ -47,12 +47,12 @@ function Packages() {
                       <li>Unlimited text and email support throughout care</li>
                       <li>Complimentary 15-minute follow-up call</li>
                       <li>Follow-up can be used for pumping, bottle introduction, starting solids, or gentle weaning</li>
-                      <li>In-home follow-up upgrade available for +$75</li>
+                      <li>In-home follow-up upgrade available for +$75 CAD</li>
                     </ul>
                     <div className="package-meta">
                       <div>
                         <p className="package-meta-label">Price</p>
-                        <p className="package-meta-value">$600</p>
+                        <p className="package-meta-value">$600 CAD</p>
                       </div>
                     </div>
                   </div>
@@ -79,7 +79,7 @@ function Packages() {
                     <div className="package-meta">
                       <div>
                         <p className="package-meta-label">Price</p>
-                        <p className="package-meta-value">$550</p>
+                        <p className="package-meta-value">$550 CAD</p>
                       </div>
                     </div>
                   </div>
@@ -104,7 +104,7 @@ function Packages() {
                     <div className="package-meta">
                       <div>
                         <p className="package-meta-label">Price</p>
-                        <p className="package-meta-value">$475</p>
+                        <p className="package-meta-value">$475 CAD</p>
                       </div>
                     </div>
                   </div>
@@ -131,6 +131,28 @@ function Packages() {
                   <div className="note-card">
                     <p>Payment can be made by cash or e-transfer.</p>
                   </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Explore other services */}
+            <section className="service-nav section">
+              <div className="container">
+                <div className="section-head">
+                  <h2>Not sure where to start?</h2>
+                  <p className="lead">Choose the type of support that best fits where you are right now.</p>
+                </div>
+                <div className="service-nav-grid">
+                  <article className="service-nav-card">
+                    <h3>Still preparing for baby's arrival?</h3>
+                    <p>Explore prenatal breastfeeding consultations and classes to help you feel ready before birth.</p>
+                    <a href="/services/prenatal-services" className="btn btn-outline">Explore Prenatal Services →</a>
+                  </article>
+                  <article className="service-nav-card">
+                    <h3>Already navigating feeding?</h3>
+                    <p>Get support with breastfeeding, pumping, milk supply, latch, bottle feeding, and other feeding concerns.</p>
+                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation Consultations →</a>
+                  </article>
                 </div>
               </div>
             </section>
