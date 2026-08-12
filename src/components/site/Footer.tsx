@@ -35,7 +35,7 @@ export default function Footer() {
                 type="email"
                 id="newsletter-email"
                 name="fields[email]"
-                placeholder="Type here..."
+                placeholder="Email"
                 autoComplete="email"
                 required
               />
