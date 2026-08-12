@@ -58,7 +58,7 @@ function PrenatalServices() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img src={prenatal1Asset.url} alt="Expecting parents holding the baby bump" className="package-img" loading="lazy" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
@@ -88,7 +88,7 @@ function PrenatalServices() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img src={prenatal2Asset.url} alt="Pregnant woman attending a virtual consultation on her laptop" className="package-img" loading="lazy" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
@@ -118,7 +118,7 @@ function PrenatalServices() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img src={prenatal3Asset.url} alt="Two pregnant women in a group class" className="package-img" loading="lazy" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
