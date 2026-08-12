@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
+import aliciaIntroAsset from "@/assets/alicia-intro.png.asset.json";
 
 const title = "Feed by Feed | Lactation Consulting & Feeding Support";
 const description = "Personalized clinical support for breastfeeding, pumping, and infant nutrition in the comfort of your home.";
@@ -43,7 +44,12 @@ function Index() {
             <section className="intro section">
               <div className="container">
                 <div className="intro-media">
-                  <div className="img-placeholder"></div>
+                  <img
+                    src={aliciaIntroAsset.url}
+                    alt="Alicia — IBCLC Lactation Consultant at Feed by Feed"
+                    className="intro-img"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="intro-content">
                   <p className="eyebrow">Worried about your baby's feeding journey?</p>
