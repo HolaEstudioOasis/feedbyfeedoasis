@@ -142,6 +142,7 @@ function Index() {
             <section className="faq section">
               <div className="container">
                 <div className="faq-intro">
+                  <p className="eyebrow">FAQs</p>
                   <h2><em>Clarity</em> before we begin</h2>
                   <p className="lead">Everything you need to know about setting up your feeding support, logistics, and how we work together.</p>
                 </div>
@@ -182,6 +183,8 @@ function Index() {
                           <p className="faq-answer">Yes. Feed by Feed offers virtual lactation consultations across Canada and internationally. We also offer in-home and in-hospital lactation support in Toronto and the GTA, depending on availability and location.<br />Virtual visits can be helpful for prenatal support, follow-ups, pumping, bottle feeding, milk supply, and troubleshooting. Home visits are helpful when you want hands-on support in your own space.</p>
                           <h4 className="faq-question">5. What happens during a consultation?</h4>
                           <p className="faq-answer">We start by talking through your feeding history, your concerns, and your goals. Depending on your situation, we may look at latch, positioning, milk transfer, pumping, bottle feeding, oral function, nipple pain, breast health, or supplementation.<br />After the visit, you will receive a personalized plan with clear next steps so you know what to focus on, one feed at a time.</p>
+                          <h4 className="faq-question">6. Do you offer support in other languages?</h4>
+                          <p className="faq-answer">Yes. Feed by Feed offers lactation and feeding support in English and Spanish.</p>
                         </div>
                       </div>
                     </div>
@@ -197,9 +200,9 @@ function Index() {
                     <div className="accordion-panel-wrap" id="panel-clinical">
                       <div className="accordion-panel-inner">
                         <div className="faq-entry">
-                          <h4 className="faq-question">6. Can you help if we are worried about milk supply?</h4>
+                          <h4 className="faq-question">7. Can you help if we are worried about milk supply?</h4>
                           <p className="faq-answer">Yes. Milk supply concerns are one of the most common reasons families reach out.<br />We look at milk transfer, pumping, supplementation, baby's weight and diapers, and anything that may be affecting supply. Sometimes the issue is milk production, and sometimes baby is having a hard time removing milk well. Together, we will create a plan based on what your family needs.</p>
-                          <h4 className="faq-question">7. Can you help with tongue tie or oral function concerns?</h4>
+                          <h4 className="faq-question">8. Can you help with tongue tie or oral function concerns?</h4>
                           <p className="faq-answer">Yes. We do a thorough oral function assessment. If a referral is needed, we can help you understand the next steps and work alongside your baby's care team.</p>
                         </div>
                       </div>
@@ -216,12 +219,10 @@ function Index() {
                     <div className="accordion-panel-wrap" id="panel-payments">
                       <div className="accordion-panel-inner">
                         <div className="faq-entry">
-                          <h4 className="faq-question">8. Are your services covered by insurance?</h4>
+                          <h4 className="faq-question">9. Are your services covered by insurance?</h4>
                           <p className="faq-answer">Our services are not directly covered by OHIP, but they may be covered by some private insurances, extended health benefits, or a Health Spending Account. Coverage depends on your individual plan, so we recommend checking with your insurance provider before booking.</p>
-                          <h4 className="faq-question">9. What payment methods do you accept?</h4>
+                          <h4 className="faq-question">10. What payment methods do you accept?</h4>
                           <p className="faq-answer">We accept all major credit card, e-transfer, and wire transfers.</p>
-                          <h4 className="faq-question">10. Do you offer support in other languages?</h4>
-                          <p className="faq-answer">Yes. Feed by Feed offers lactation and feeding support in English and Spanish.</p>
                         </div>
                       </div>
                     </div>

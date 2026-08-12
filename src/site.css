@@ -1870,3 +1870,58 @@ a.img-placeholder {
 .post-back .post-read-more {
   justify-content: flex-start;
 }
+
+/* Balanced section subtitles */
+.services .section-head,
+.credentials .section-head {
+  max-width: 900px;
+}
+
+.services .section-head p.lead,
+.credentials .section-head p.lead,
+.reviews .section-head p.lead {
+  max-width: 80ch;
+}
+
+.faq-intro .eyebrow {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 1024px) {
+  .credentials .section-head h2 {
+    max-width: none;
+    white-space: nowrap;
+    font-size: clamp(1.9rem, 2.9vw, 2.6rem);
+  }
+}
+
+/* Service cross-navigation */
+.service-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.service-nav-card {
+  background: var(--crema-marfil);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.service-nav-card h3 {
+  font-family: var(--font-heading);
+}
+
+.service-nav-card .btn {
+  margin-top: auto;
+}
+
+@media (max-width: 767px) {
+  .service-nav-grid {
+    grid-template-columns: 1fr;
+  }
+}
