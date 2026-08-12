@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
+import prenatal1Asset from "@/assets/prenatal-1.webp.asset.json";
+import prenatal2Asset from "@/assets/prenatal-2.webp.asset.json";
+import prenatal3Asset from "@/assets/prenatal-3.webp.asset.json";
 
 const title = "Prenatal Services | Feed by Feed";
 const description = "Feel informed, prepared, and confident before your baby's arrival with Feed by Feed's prenatal breastfeeding services.";
@@ -58,7 +61,7 @@ function PrenatalServices() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img src={prenatal1Asset.url} alt="Expecting parents holding the baby bump" className="package-img" loading="lazy" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
@@ -88,7 +91,7 @@ function PrenatalServices() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img src={prenatal2Asset.url} alt="Pregnant woman attending a virtual consultation on her laptop" className="package-img" loading="lazy" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>
@@ -118,7 +121,7 @@ function PrenatalServices() {
                     </div>
                   </div>
                   <div className="package-media">
-                    <div className="img-placeholder"></div>
+                    <img src={prenatal3Asset.url} alt="Two pregnant women in a group class" className="package-img" loading="lazy" />
                   </div>
                   <button type="button" className="btn btn-outline package-book-btn" disabled={true}>Book Now</button>
                 </article>

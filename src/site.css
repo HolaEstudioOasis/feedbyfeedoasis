@@ -1229,10 +1229,18 @@ a.img-placeholder {
   grid-row: 1;
 }
 
-.package-media .img-placeholder {
+.package-media .img-placeholder,
+.package-media .package-img {
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-md);
   background: var(--white);
+}
+
+.package-media .package-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .package-book-btn {
