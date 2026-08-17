@@ -92,20 +92,33 @@ function Blog() {
                   <p>Get expert, judgment-free feeding tips and parenthood insights delivered to your inbox monthly.</p>
                 </div>
 
-                <form
-                  className="newsletter-form blog-newsletter-form"
-                  action="https://assets.mailerlite.com/jsonp/2570708/forms/195544417940014318/subscribe"
-                  method="post"
-                  target="_blank"
-                >
-                  <div className="newsletter-field">
-                    <label className="field-label" htmlFor="blog-email">Email</label>
-                    <input type="email" id="blog-email" name="fields[email]" placeholder="Email" autoComplete="email" required={true} />
-                  </div>
-                  <button type="submit" className="btn btn-dark">Join</button>
-                  <input type="hidden" name="ml-submit" value="1" />
-                  <input type="hidden" name="anticsrf" value="true" />
-                </form>
+                {newsletter.status === "success" ? (
+                  <p className="newsletter-message" role="status">
+                    Thanks for subscribing! Please check your inbox.
+                  </p>
+                ) : (
+                  <form
+                    className="newsletter-form blog-newsletter-form"
+                    action={NEWSLETTER_ACTION}
+                    method="post"
+                    onSubmit={newsletter.onSubmit}
+                  >
+                    <div className="newsletter-field">
+                      <label className="field-label" htmlFor="blog-email">Email</label>
+                      <input type="email" id="blog-email" name="fields[email]" placeholder="Email" autoComplete="email" required={true} />
+                    </div>
+                    <button type="submit" className="btn btn-dark" disabled={newsletter.status === "sending"}>
+                      {newsletter.status === "sending" ? "Sending..." : "Join"}
+                    </button>
+                    <input type="hidden" name="ml-submit" value="1" />
+                    <input type="hidden" name="anticsrf" value="true" />
+                    {newsletter.status === "error" && (
+                      <p className="newsletter-message newsletter-message-error" role="alert">
+                        Something went wrong, please try again.
+                      </p>
+                    )}
+                  </form>
+                )}
               </div>
             </section>
 
