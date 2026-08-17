@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import logoAzul from "@/assets/logo-azul.svg.asset.json";
+import { useNewsletterForm, NEWSLETTER_ACTION } from "@/hooks/useNewsletterForm";
 
 export default function Footer() {
+  const newsletter = useNewsletterForm();
   return (
     <footer className="site-footer">
       <div className="container">
