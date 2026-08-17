@@ -34,6 +34,7 @@ function ArrowIcon() {
 
 function Blog() {
   const posts = Route.useLoaderData() as BlogListItem[];
+  const newsletter = useNewsletterForm();
 
   return (
     <SiteLayout>
