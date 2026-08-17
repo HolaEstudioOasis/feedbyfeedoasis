@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import logoAzul from "@/assets/logo-azul.svg.asset.json";
+import { useNewsletterForm, NEWSLETTER_ACTION } from "@/hooks/useNewsletterForm";
 
 export default function Footer() {
+  const newsletter = useNewsletterForm();
   return (
     <footer className="site-footer">
       <div className="container">
@@ -22,27 +24,40 @@ export default function Footer() {
               Get expert, judgment-free feeding tips and parenthood insights delivered to your
               inbox monthly.
             </p>
-            <form
-              className="newsletter-form"
-              action="https://assets.mailerlite.com/jsonp/2570708/forms/195544417940014318/subscribe"
-              method="post"
-              target="_blank"
-            >
-              <label htmlFor="newsletter-email" className="visually-hidden">
-                Email address
-              </label>
-              <input
-                type="email"
-                id="newsletter-email"
-                name="fields[email]"
-                placeholder="Email"
-                autoComplete="email"
-                required
-              />
-              <button type="submit">Subscribe</button>
-              <input type="hidden" name="ml-submit" value="1" />
-              <input type="hidden" name="anticsrf" value="true" />
-            </form>
+            {newsletter.status === "success" ? (
+              <p className="newsletter-message" role="status">
+                Thanks for subscribing! Please check your inbox.
+              </p>
+            ) : (
+              <form
+                className="newsletter-form"
+                action={NEWSLETTER_ACTION}
+                method="post"
+                onSubmit={newsletter.onSubmit}
+              >
+                <label htmlFor="newsletter-email" className="visually-hidden">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  id="newsletter-email"
+                  name="fields[email]"
+                  placeholder="Email"
+                  autoComplete="email"
+                  required
+                />
+                <button type="submit" disabled={newsletter.status === "sending"}>
+                  {newsletter.status === "sending" ? "Sending..." : "Subscribe"}
+                </button>
+                <input type="hidden" name="ml-submit" value="1" />
+                <input type="hidden" name="anticsrf" value="true" />
+                {newsletter.status === "error" && (
+                  <p className="newsletter-message newsletter-message-error" role="alert">
+                    Something went wrong, please try again.
+                  </p>
+                )}
+              </form>
+            )}
           </div>
         </div>
 

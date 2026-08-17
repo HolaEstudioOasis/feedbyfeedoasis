@@ -1959,3 +1959,14 @@ a.img-placeholder {
     grid-template-columns: 1fr;
   }
 }
+
+/* Newsletter inline feedback */
+.newsletter-message {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: inherit;
+}
+.newsletter-message-error {
+  color: #b3261e;
+}
