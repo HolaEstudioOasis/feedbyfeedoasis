@@ -616,13 +616,14 @@ a.img-placeholder {
 
 
 .service-card h3 {
-  margin-top: 22px;
+  margin-top: 28px;
 }
 
 .service-card .btn {
   margin-top: auto;
   align-self: center;
   white-space: nowrap;
+  min-width: 280px;
 }
 
 /* ==========================================================================
@@ -1980,10 +1981,16 @@ a.img-placeholder {
 .service-card-desc {
   color: var(--text-muted-on-light, inherit);
   font-size: 0.95rem;
-  line-height: 1.5;
-  margin: -6px auto 20px;
+  line-height: 1.7;
+  margin: 14px auto 24px;
   max-width: 34ch;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .service-card-desc {
+    min-height: calc(3 * 1.7 * 0.95rem);
+  }
 }
 
 .reviews-carousel {
