@@ -7,8 +7,8 @@ import lactationHomeAsset from "@/assets/lactation-home.webp.asset.json";
 import packagesHomeAsset from "@/assets/packages-home.webp.asset.json";
 
 
-const title = "Feed by Feed | Lactation Consulting & Feeding Support";
-const description = "Personalized clinical support for breastfeeding, pumping, and infant nutrition in the comfort of your home.";
+const title = "Feed by Feed | Lactation & Feeding Support in Toronto & the GTA";
+const description = "Warm, evidence-based support for breastfeeding, pumping, bottle feeding and more. At home across Toronto & the GTA, or virtually wherever you are.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,6 +19,8 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
   }),
   component: Index,
