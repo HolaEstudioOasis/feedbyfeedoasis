@@ -586,12 +586,14 @@ a.img-placeholder {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  align-items: stretch;
 }
 
 .service-card {
   display: flex;
   flex-direction: column;
   text-align: center;
+  height: 100%;
 }
 
 .service-card .img-placeholder,
