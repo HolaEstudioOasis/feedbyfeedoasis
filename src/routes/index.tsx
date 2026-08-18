@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
 import ReviewsCarousel from "@/components/site/ReviewsCarousel";
+import HeroCarousel from "@/components/site/HeroCarousel";
 import aliciaIntroAsset from "@/assets/alicia-intro.webp.asset.json";
 import prenatalHomeAsset from "@/assets/Prenatal_Home.webp.asset.json";
 import lactationHomeAsset from "@/assets/lactation-home.webp.asset.json";
