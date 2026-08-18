@@ -31,7 +31,8 @@ function Index() {
     <SiteLayout>
       <main>
         {/* Hero */}
-            <section className="hero section">
+            <section className="hero hero--fullbleed">
+              <HeroCarousel />
               <div className="container">
                 <div className="hero-content">
                   <h1>Feel more confident feeding your baby, <em>one feed at a time.</em></h1>
@@ -42,11 +43,9 @@ function Index() {
                     <a href="/about" className="link-inline">About Alicia</a>
                   </div>
                 </div>
-                <div className="hero-media">
-                  <div className="img-placeholder"></div>
-                </div>
               </div>
             </section>
+
 
             {/* Intro / Meet Alicia */}
             <section className="intro section">
