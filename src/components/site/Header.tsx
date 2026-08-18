@@ -10,7 +10,7 @@ const navLinks = [
 const serviceLinks = [
   { to: "/services/prenatal-services", label: "Prenatal Services" },
   { to: "/services/lactation-consultations", label: "Lactation Consultations" },
-  { to: "/services/packages", label: "Packages" },
+  { to: "/services/packages", label: "Bundles" },
 ] as const;
 
 const tailLinks = [

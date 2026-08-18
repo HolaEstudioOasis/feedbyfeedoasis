@@ -164,8 +164,8 @@ function LactationConsultations() {
                   </article>
                   <article className="service-nav-card">
                     <h3>Want support beyond one consultation?</h3>
-                    <p>Explore packages that combine prenatal preparation, lactation care, and follow-up support.</p>
-                    <a href="/services/packages" className="btn btn-outline">Explore Packages →</a>
+                    <p>Explore bundles that combine prenatal preparation, lactation care, and follow-up support.</p>
+                    <a href="/services/packages" className="btn btn-outline">Explore Bundles →</a>
                   </article>
                 </div>
               </div>

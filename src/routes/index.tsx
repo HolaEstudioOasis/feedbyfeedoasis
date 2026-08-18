@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
+import ReviewsCarousel from "@/components/site/ReviewsCarousel";
 import aliciaIntroAsset from "@/assets/alicia-intro.webp.asset.json";
 import prenatalHomeAsset from "@/assets/Prenatal_Home.webp.asset.json";
 import lactationHomeAsset from "@/assets/lactation-home.webp.asset.json";
@@ -31,8 +32,9 @@ function Index() {
             <section className="hero section">
               <div className="container">
                 <div className="hero-content">
-                  <h1>Empowering your family for a <em>confident</em> feeding journey.</h1>
-                  <p className="lead">Personalized clinical support for breastfeeding, pumping, and infant nutrition in the comfort of your home.</p>
+                  <h1>Feel more confident feeding your baby, <em>one feed at a time.</em></h1>
+                  <p className="lead">Warm, evidence-based support for breastfeeding, pumping, bottle feeding and more. At home across Toronto &amp; the GTA, or virtually wherever you are.</p>
+
                   <div className="hero-actions">
                     <button type="button" className="btn btn-primary" disabled={true}>Book Now</button>
                     <a href="/about" className="link-inline">About Alicia</a>
@@ -56,9 +58,10 @@ function Index() {
                   />
                 </div>
                 <div className="intro-content">
-                  <p className="eyebrow">Worried about your baby's feeding journey?</p>
-                  <h2>Hi, I'm Alicia. I'm here to bring calm to your table.</h2>
-                  <p className="lead">After navigating my own complex feeding challenges with my two children, I realized no family should walk this path alone or feel judged. As an IBCLC, my mission is to help you build confidence in every single feed.</p>
+                  <p className="eyebrow">Feeding your baby can come with more questions than you expected.</p>
+                  <h2>Hi, I'm Alicia, and I'm here to help feeding feel less overwhelming.</h2>
+                  <p className="lead">After navigating my own feeding challenges with my two boys, I know how hard it can feel when feeding doesn't go the way you expected. I realized no family should have to walk this path alone or feel judged. As an IBCLC and nutrition professional, I'm here to help you understand what's happening and find a realistic plan that works for your baby and your family.</p>
+
                   <a href="/about" className="btn btn-primary">Get to Know Me</a>
                 </div>
               </div>
@@ -80,6 +83,7 @@ function Index() {
                       </a>
                     </div>
                     <h3>Prenatal Services</h3>
+                    <p className="service-card-desc">Know what to expect before baby arrives.</p>
                     <a href="/services/prenatal-services" className="btn btn-primary">More info</a>
                   </article>
 
@@ -90,17 +94,20 @@ function Index() {
                       </a>
                     </div>
                     <h3>Lactation Consultations</h3>
+                    <p className="service-card-desc">Hands-on or virtual help for breastfeeding, pumping, bottles, supply and feeding challenges.</p>
                     <a href="/services/lactation-consultations" className="btn btn-primary">More info</a>
                   </article>
 
                   <article className="service-card">
                     <div className="zoom-frame">
-                      <a href="/services/packages" className="service-card-img-link" aria-label="Learn more about Packages">
-                        <img src={packagesHomeAsset.url} alt="Packages" className="service-card-img img-placeholder--zoom" loading="lazy" />
+                      <a href="/services/packages" className="service-card-img-link" aria-label="Learn more about Bundles">
+                        <img src={packagesHomeAsset.url} alt="Bundles" className="service-card-img img-placeholder--zoom" loading="lazy" />
                       </a>
                     </div>
-                    <h3>Packages</h3>
+                    <h3>Bundles</h3>
+                    <p className="service-card-desc">Ongoing support when you want someone in your corner beyond one visit.</p>
                     <a href="/services/packages" className="btn btn-primary">More info</a>
+
                   </article>
                 </div>
               </div>
@@ -110,47 +117,11 @@ function Index() {
             <section className="reviews section">
               <div className="container">
                 <div className="section-head">
-                  <h2>Real stories of confidence, clarity, and calm</h2>
-                  <p className="lead">Feeding your baby shouldn't feel like an isolated challenge. Here is how we've helped modern families across Toronto and beyond find their unique rhythm.</p>
+                  <h2>Kind words from families I've supported</h2>
                 </div>
 
-                <div className="reviews-grid">
-                  <article className="review-card">
-                    <div className="stars" aria-hidden="true">
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                    </div>
-                    <blockquote className="quote">"Alicia helped us get through the hardest first two weeks of breastfeeding. Her calm, judgment-free guidance gave us the confidence we needed."</blockquote>
-                    <p className="review-author">— Sarah M., Toronto</p>
-                  </article>
+                <ReviewsCarousel />
 
-                  <article className="review-card">
-                    <div className="stars" aria-hidden="true">
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                    </div>
-                    <blockquote className="quote">"From painful latch to pain-free feeds in one visit. I wish we had called sooner!"</blockquote>
-                    <p className="review-author">— Priya K., Mississauga</p>
-                  </article>
-
-                  <article className="review-card">
-                    <div className="stars" aria-hidden="true">
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                    </div>
-                    <blockquote className="quote">"Virtual support that felt just as personal as in-home. Alicia made pumping and returning to work so much less stressful."</blockquote>
-                    <p className="review-author">— Jenna R., Etobicoke</p>
-                  </article>
-                </div>
               </div>
             </section>
 
@@ -238,7 +209,7 @@ function Index() {
                           <h4 className="faq-question">9. Are your services covered by insurance?</h4>
                           <p className="faq-answer">Our services are not directly covered by OHIP, but they may be covered by some private insurances, extended health benefits, or a Health Spending Account. Coverage depends on your individual plan, so we recommend checking with your insurance provider before booking.</p>
                           <h4 className="faq-question">10. What payment methods do you accept?</h4>
-                          <p className="faq-answer">We accept all major credit card, e-transfer, and wire transfers.</p>
+                          <p className="faq-answer">We accept all major credit card, e-transfer, wire transfers, and cash.</p>
                         </div>
                       </div>
                     </div>
@@ -252,7 +223,7 @@ function Index() {
               <div className="container">
                 <div className="cta-content">
                   <p className="eyebrow">Ready to start?</p>
-                  <h2>Every feeding journey is unique<br /><em>Let's find yours</em></h2>
+                  <h2>You don't have to figure out the next feed alone.<br /><em>Get the support and guidance you need.</em></h2>
                   <button type="button" className="btn btn-cream" disabled={true}>Book a consultation</button>
                   <p className="cta-footnote">Have questions? Contact us at <a href="/contact">hello@feedbyfeed.com</a></p>
                 </div>

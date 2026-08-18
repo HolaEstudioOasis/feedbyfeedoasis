@@ -27,7 +27,7 @@ function About() {
         {/* Hero */}
             <section className="page-hero">
               <div className="container">
-                <h1>A steady presence, built around <em>the whole family</em></h1>
+                <h1>Feeding support for the whole family, <em>one feed at a time</em></h1>
               </div>
             </section>
 
@@ -39,10 +39,11 @@ function About() {
                 </div>
                 <div className="story-content">
                   <h2>The heart behind Feed by Feed</h2>
-                  <p>Before becoming an IBCLC, I was already a nutrition professional, a healthcare provider, and a mother learning that feeding rarely follows a perfect plan. Every baby is different. Every family is different. What works for one child may not work for the next.</p>
-                  <p>Over the years, one phrase naturally became part of almost every conversation I had with parents: <strong>One feed at a time.</strong> Not because feeding should feel slow—but because overwhelmed families don't need more information. They need someone who can help them focus on the next step.</p>
+                  <p>I came to lactation through nutrition, years of working with families, and my own experience as a mother learning that feeding rarely follows a perfect plan and that good support isn't about telling a family what they "should" do. It's about understanding what matters to them and building a plan they can actually live with. Every baby is different. Every family is different. What works for one child may not work for the next.</p>
+                  <p>Over the years, one phrase naturally became part of so many conversations I had with parents: take it one feed at a time. Feeding is rarely linear. Some feeds go well, others feel harder, and progress doesn't always happen in a straight line. When feeding feels overwhelming, sometimes you need someone to help you make sense of it all, see the bigger picture, and focus on the next step.</p>
                   <p>That simple idea became Feed by Feed.</p>
-                  <p>Today, I support families through breastfeeding, bottle feeding, pumping, combination feeding, starting solids, and gentle weaning—with practical guidance rooted in evidence, never judgment.</p>
+                  <p>Today, I support families through breastfeeding, bottle feeding, pumping, combination feeding, starting solids, and weaning, with practical guidance rooted in evidence and never judgment.</p>
+
                 </div>
               </div>
             </section>
@@ -52,10 +53,10 @@ function About() {
               <div className="container story-grid">
                 <div className="story-content">
                   <p>Before Feed by Feed became a practice, it was simply our home.</p>
-                  <p>Like so many new parents, we stepped into those first days with questions, long nights, and more love than confidence. There wasn't a perfect plan—only two parents learning, adapting, and showing up for our babies, one feeding at a time.</p>
-                  <p>My husband never stood on the sidelines. He became my teammate through every challenge, every small victory, and every moment that reminded me that feeding a baby is never one person's responsibility.</p>
-                  <p>That experience shaped everything I believe today. Because when a family feels supported, a parent feels stronger. And when both parents are part of the journey, babies thrive.</p>
-                  <p>Feeding a baby isn't something a mother should carry alone. It's something a family learns together.</p>
+                  <p>Like so many new parents, we stepped into those first weeks with questions, long nights, and more love than confidence. We were two parents learning, adapting, and showing up for our babies, one feeding at a time. My husband was my teammate through all of it, sharing the responsibility and helping me feel like I wasn't doing it alone.</p>
+                  <p>My mom was another huge part of that support. In those early weeks, while I was learning, practicing, and trying to get feeding to work, she helped hold everything else together so I could focus on my baby and my goals. I still tell her that her support made a real difference in helping me get there.</p>
+                  <p>That shaped the way I work today: feeding support should include the family and the people around you. It's something families learn and adapt to together, and no parent should feel like they have to carry it alone.</p>
+
                 </div>
                 <div className="story-media">
                   <img src={about2Asset.url} alt="Alicia with her husband and children" className="story-img" loading="lazy" />
@@ -80,14 +81,15 @@ function About() {
                     <h3>Bachelor's degree in Nutrition</h3>
                   </div>
                   <div className="credential-card">
-                    <h3>10+</h3>
-                    <p>years of healthcare experience</p>
+                    <h3>10+ years</h3>
+                    <p>across nutrition, healthcare and family education</p>
                   </div>
                   <div className="credential-card">
-                    <h3>Bilingual Support</h3>
+                    <h3>Bilingual care</h3>
                     <p>English &amp; Spanish</p>
                   </div>
                 </div>
+
               </div>
             </section>
 
@@ -96,19 +98,20 @@ function About() {
               <div className="container">
                 <div className="section-head">
                   <h2>Personalized feeding support for every family</h2>
-                  <p className="lead">Feed by Feed offers personalized lactation and infant feeding support tailored to your family's unique needs—not a one-size-fits-all approach.</p>
-                  <p className="lead">Whether you're breastfeeding, pumping, combination feeding, bottle feeding, introducing solids, or preparing for your baby's arrival, you'll receive evidence-based guidance designed to help you feel confident every step of the way.</p>
-                  <p className="lead">From in-home lactation consultations across Toronto and the GTA to virtual appointments throughout Canada, every recommendation is built around your baby, your lifestyle, and your family's goals.</p>
+                  <p className="lead">Feed by Feed offers personalized lactation and infant feeding support built around your family, not a one-size-fits-all approach.</p>
+                  <p className="lead">Whether you're breastfeeding, pumping, combination feeding, bottle feeding, introducing solids, weaning, or preparing for your baby's arrival, you'll receive practical, evidence-based guidance to help you feel confident every step of the way.</p>
+                  <p className="lead">From in-home lactation consultations across Toronto and the GTA to virtual appointments anywhere you are, every recommendation is built around your baby, your family, and what matters most to you.</p>
                 </div>
 
                 <div className="mission-grid">
                   <div className="mission-card">
-                    <p className="eyebrow eyebrow--ocre">Our mission</p>
-                    <p>To provide comprehensive guidance and support to families throughout their infant feeding journey, transforming feeding decisions into a shared family effort and empowering caregivers with the knowledge and confidence they need.</p>
+                    <p className="eyebrow eyebrow--ocre">Why we're here</p>
+                    <p>To make feeding feel less overwhelming by giving families practical, evidence-based support that respects their goals, their choices, and real life.</p>
                   </div>
                   <div className="mission-card">
-                    <p className="eyebrow eyebrow--ocre">Our vision</p>
-                    <p>To become Canada's most trusted family-centered infant feeding consultancy, empowering families with compassionate, evidence-based care while expanding our reach across the United States and Mexico within the next five years.</p>
+                    <p className="eyebrow eyebrow--ocre">What we hope for</p>
+                    <p>A future where families feel informed, supported and never judged for how they feed their baby.</p>
+
                   </div>
                 </div>
               </div>

@@ -1970,3 +1970,84 @@ a.img-placeholder {
 .newsletter-message-error {
   color: #b3261e;
 }
+
+/* ==========================================================================
+   Service card description + Reviews carousel
+   ========================================================================== */
+.service-card-desc {
+  color: var(--text-muted-on-light, inherit);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: -6px 0 4px;
+  max-width: 34ch;
+}
+
+.reviews-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.reviews-carousel-viewport {
+  width: 100%;
+  max-width: 820px;
+}
+
+.reviews-carousel .review-card {
+  min-height: 320px;
+  justify-content: flex-start;
+}
+
+.reviews-carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.carousel-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--crema-marfil);
+  background: transparent;
+  color: var(--text-on-dark);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: var(--crema-marfil);
+  color: var(--text-on-light);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--crema-marfil);
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel-dot.is-active {
+  background: var(--crema-marfil);
+}
+
+.reviews .btn-outline {
+  border-color: var(--crema-marfil);
+  color: var(--text-on-dark);
+}
+
+.reviews .btn-outline:hover:not(:disabled) {
+  background: var(--crema-marfil);
+  color: var(--text-on-light);
+}
