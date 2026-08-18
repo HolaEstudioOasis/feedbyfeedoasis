@@ -1741,11 +1741,20 @@ a.img-placeholder {
     transition: max-height var(--transition-base), padding var(--transition-base);
   }
 
+  .has-dropdown .dropdown-menu::before {
+    display: none;
+  }
+
+  .has-dropdown .dropdown-menu > li {
+    padding: 0;
+  }
+
   .has-dropdown.is-open .dropdown-menu {
     max-height: 260px;
     padding: 6px 10px;
     transform: none;
   }
+
 
   .dropdown-menu a {
     color: var(--text-on-dark);
