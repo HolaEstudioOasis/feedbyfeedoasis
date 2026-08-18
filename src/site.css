@@ -1720,7 +1720,6 @@ a.img-placeholder {
     gap: 14px;
   }
 
-  .hero .container,
   .intro .container,
   .story-grid {
     grid-template-columns: 1fr;
