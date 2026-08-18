@@ -39,10 +39,11 @@ function About() {
                 </div>
                 <div className="story-content">
                   <h2>The heart behind Feed by Feed</h2>
-                  <p>Before becoming an IBCLC, I was already a nutrition professional, a healthcare provider, and a mother learning that feeding rarely follows a perfect plan. Every baby is different. Every family is different. What works for one child may not work for the next.</p>
-                  <p>Over the years, one phrase naturally became part of almost every conversation I had with parents: <strong>One feed at a time.</strong> Not because feeding should feel slow—but because overwhelmed families don't need more information. They need someone who can help them focus on the next step.</p>
+                  <p>I came to lactation through nutrition, years of working with families, and my own experience as a mother learning that feeding rarely follows a perfect plan and that good support isn't about telling a family what they "should" do. It's about understanding what matters to them and building a plan they can actually live with. Every baby is different. Every family is different. What works for one child may not work for the next.</p>
+                  <p>Over the years, one phrase naturally became part of so many conversations I had with parents: take it one feed at a time. Feeding is rarely linear. Some feeds go well, others feel harder, and progress doesn't always happen in a straight line. When feeding feels overwhelming, sometimes you need someone to help you make sense of it all, see the bigger picture, and focus on the next step.</p>
                   <p>That simple idea became Feed by Feed.</p>
-                  <p>Today, I support families through breastfeeding, bottle feeding, pumping, combination feeding, starting solids, and gentle weaning—with practical guidance rooted in evidence, never judgment.</p>
+                  <p>Today, I support families through breastfeeding, bottle feeding, pumping, combination feeding, starting solids, and weaning, with practical guidance rooted in evidence and never judgment.</p>
+
                 </div>
               </div>
             </section>
