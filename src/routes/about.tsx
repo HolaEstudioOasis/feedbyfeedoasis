@@ -53,10 +53,10 @@ function About() {
               <div className="container story-grid">
                 <div className="story-content">
                   <p>Before Feed by Feed became a practice, it was simply our home.</p>
-                  <p>Like so many new parents, we stepped into those first days with questions, long nights, and more love than confidence. There wasn't a perfect plan—only two parents learning, adapting, and showing up for our babies, one feeding at a time.</p>
-                  <p>My husband never stood on the sidelines. He became my teammate through every challenge, every small victory, and every moment that reminded me that feeding a baby is never one person's responsibility.</p>
-                  <p>That experience shaped everything I believe today. Because when a family feels supported, a parent feels stronger. And when both parents are part of the journey, babies thrive.</p>
-                  <p>Feeding a baby isn't something a mother should carry alone. It's something a family learns together.</p>
+                  <p>Like so many new parents, we stepped into those first weeks with questions, long nights, and more love than confidence. We were two parents learning, adapting, and showing up for our babies, one feeding at a time. My husband was my teammate through all of it, sharing the responsibility and helping me feel like I wasn't doing it alone.</p>
+                  <p>My mom was another huge part of that support. In those early weeks, while I was learning, practicing, and trying to get feeding to work, she helped hold everything else together so I could focus on my baby and my goals. I still tell her that her support made a real difference in helping me get there.</p>
+                  <p>That shaped the way I work today: feeding support should include the family and the people around you. It's something families learn and adapt to together, and no parent should feel like they have to carry it alone.</p>
+
                 </div>
                 <div className="story-media">
                   <img src={about2Asset.url} alt="Alicia with her husband and children" className="story-img" loading="lazy" />
