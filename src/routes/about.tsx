@@ -27,7 +27,7 @@ function About() {
         {/* Hero */}
             <section className="page-hero">
               <div className="container">
-                <h1>A steady presence, built around <em>the whole family</em></h1>
+                <h1>Feeding support for the whole family, <em>one feed at a time</em></h1>
               </div>
             </section>
 
