@@ -622,6 +622,7 @@ a.img-placeholder {
 .service-card .btn {
   margin-top: auto;
   align-self: center;
+  white-space: nowrap;
 }
 
 /* ==========================================================================
