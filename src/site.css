@@ -517,16 +517,96 @@ a.img-placeholder {
 /* ==========================================================================
    Hero
    ========================================================================== */
-.hero .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-  padding-block: clamp(48px, 6vw, 96px);
+.hero--fullbleed {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--azul-noche);
+}
+
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(22, 35, 81, 0.94) 0%,
+    rgba(22, 35, 81, 0.88) 35%,
+    rgba(22, 35, 81, 0.55) 60%,
+    rgba(22, 35, 81, 0.1) 85%,
+    rgba(22, 35, 81, 0) 100%
+  );
+}
+
+.hero-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.hero-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--crema-marfil);
+  background: rgba(242, 231, 211, 0.25);
+  padding: 0;
+  cursor: pointer;
+  transition: background var(--transition-base);
+}
+
+.hero-dot.is-active {
+  background: var(--crema-marfil);
+}
+
+.hero--fullbleed .container {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(72px, 9vw, 140px);
+}
+
+.hero-content {
+  max-width: 620px;
+  color: var(--text-on-dark);
+}
+
+.hero-content h1,
+.hero-content h1 em {
+  color: var(--crema-marfil);
 }
 
 .hero-content p.lead {
   margin-top: 22px;
+  color: var(--text-on-dark);
+}
+
+.hero-content .link-inline {
+  color: var(--crema-marfil);
 }
 
 .hero-actions {
@@ -537,10 +617,12 @@ a.img-placeholder {
   flex-wrap: wrap;
 }
 
-.hero-media .img-placeholder {
-  aspect-ratio: 1 / 1;
-  border-radius: var(--radius-lg);
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    transition: none;
+  }
 }
+
 
 /* ==========================================================================
    Intro (Alicia) section
@@ -1638,7 +1720,6 @@ a.img-placeholder {
     gap: 14px;
   }
 
-  .hero .container,
   .intro .container,
   .story-grid {
     grid-template-columns: 1fr;
@@ -2062,4 +2143,24 @@ a.img-placeholder {
 .reviews .btn-outline:hover:not(:disabled) {
   background: var(--crema-marfil);
   color: var(--text-on-light);
+}
+
+/* Hero — mobile overlay (vertical gradient) */
+@media (max-width: 760px) {
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(22, 35, 81, 0.94) 0%,
+      rgba(22, 35, 81, 0.88) 55%,
+      rgba(22, 35, 81, 0.7) 100%
+    );
+  }
+
+  .hero-slide {
+    object-position: center;
+  }
+
+  .hero-content {
+    max-width: none;
+  }
 }

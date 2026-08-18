@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
 import ReviewsCarousel from "@/components/site/ReviewsCarousel";
+import HeroCarousel from "@/components/site/HeroCarousel";
 import aliciaIntroAsset from "@/assets/alicia-intro.webp.asset.json";
 import prenatalHomeAsset from "@/assets/Prenatal_Home.webp.asset.json";
 import lactationHomeAsset from "@/assets/lactation-home.webp.asset.json";
@@ -31,7 +32,8 @@ function Index() {
     <SiteLayout>
       <main>
         {/* Hero */}
-            <section className="hero section">
+            <section className="hero hero--fullbleed">
+              <HeroCarousel />
               <div className="container">
                 <div className="hero-content">
                   <h1>Feel more confident feeding your baby, <em>one feed at a time.</em></h1>
@@ -42,11 +44,9 @@ function Index() {
                     <a href="/about" className="link-inline">About Alicia</a>
                   </div>
                 </div>
-                <div className="hero-media">
-                  <div className="img-placeholder"></div>
-                </div>
               </div>
             </section>
+
 
             {/* Intro / Meet Alicia */}
             <section className="intro section">
