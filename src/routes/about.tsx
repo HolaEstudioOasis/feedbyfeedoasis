@@ -98,19 +98,20 @@ function About() {
               <div className="container">
                 <div className="section-head">
                   <h2>Personalized feeding support for every family</h2>
-                  <p className="lead">Feed by Feed offers personalized lactation and infant feeding support tailored to your family's unique needs—not a one-size-fits-all approach.</p>
-                  <p className="lead">Whether you're breastfeeding, pumping, combination feeding, bottle feeding, introducing solids, or preparing for your baby's arrival, you'll receive evidence-based guidance designed to help you feel confident every step of the way.</p>
-                  <p className="lead">From in-home lactation consultations across Toronto and the GTA to virtual appointments throughout Canada, every recommendation is built around your baby, your lifestyle, and your family's goals.</p>
+                  <p className="lead">Feed by Feed offers personalized lactation and infant feeding support built around your family, not a one-size-fits-all approach.</p>
+                  <p className="lead">Whether you're breastfeeding, pumping, combination feeding, bottle feeding, introducing solids, weaning, or preparing for your baby's arrival, you'll receive practical, evidence-based guidance to help you feel confident every step of the way.</p>
+                  <p className="lead">From in-home lactation consultations across Toronto and the GTA to virtual appointments anywhere you are, every recommendation is built around your baby, your family, and what matters most to you.</p>
                 </div>
 
                 <div className="mission-grid">
                   <div className="mission-card">
-                    <p className="eyebrow eyebrow--ocre">Our mission</p>
-                    <p>To provide comprehensive guidance and support to families throughout their infant feeding journey, transforming feeding decisions into a shared family effort and empowering caregivers with the knowledge and confidence they need.</p>
+                    <p className="eyebrow eyebrow--ocre">Why we're here</p>
+                    <p>To make feeding feel less overwhelming by giving families practical, evidence-based support that respects their goals, their choices, and real life.</p>
                   </div>
                   <div className="mission-card">
-                    <p className="eyebrow eyebrow--ocre">Our vision</p>
-                    <p>To become Canada's most trusted family-centered infant feeding consultancy, empowering families with compassionate, evidence-based care while expanding our reach across the United States and Mexico within the next five years.</p>
+                    <p className="eyebrow eyebrow--ocre">What we hope for</p>
+                    <p>A future where families feel informed, supported and never judged for how they feed their baby.</p>
+
                   </div>
                 </div>
               </div>
