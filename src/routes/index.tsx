@@ -110,47 +110,11 @@ function Index() {
             <section className="reviews section">
               <div className="container">
                 <div className="section-head">
-                  <h2>Real stories of confidence, clarity, and calm</h2>
-                  <p className="lead">Feeding your baby shouldn't feel like an isolated challenge. Here is how we've helped modern families across Toronto and beyond find their unique rhythm.</p>
+                  <h2>Kind words from families I've supported</h2>
                 </div>
 
-                <div className="reviews-grid">
-                  <article className="review-card">
-                    <div className="stars" aria-hidden="true">
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                    </div>
-                    <blockquote className="quote">"Alicia helped us get through the hardest first two weeks of breastfeeding. Her calm, judgment-free guidance gave us the confidence we needed."</blockquote>
-                    <p className="review-author">— Sarah M., Toronto</p>
-                  </article>
+                <ReviewsCarousel />
 
-                  <article className="review-card">
-                    <div className="stars" aria-hidden="true">
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                    </div>
-                    <blockquote className="quote">"From painful latch to pain-free feeds in one visit. I wish we had called sooner!"</blockquote>
-                    <p className="review-author">— Priya K., Mississauga</p>
-                  </article>
-
-                  <article className="review-card">
-                    <div className="stars" aria-hidden="true">
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                      <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
-                    </div>
-                    <blockquote className="quote">"Virtual support that felt just as personal as in-home. Alicia made pumping and returning to work so much less stressful."</blockquote>
-                    <p className="review-author">— Jenna R., Etobicoke</p>
-                  </article>
-                </div>
               </div>
             </section>
 
