@@ -4,8 +4,8 @@ import packages1 from "@/assets/packages-1.webp.asset.json";
 import packages2 from "@/assets/packages-2.webp.asset.json";
 import packages3 from "@/assets/packages-3.webp.asset.json";
 
-const title = "Packages | Feed by Feed";
-const description = "Lactation and infant feeding support packages combining prenatal preparation, postpartum consultations, and follow-up care.";
+const title = "Bundles | Feed by Feed";
+const description = "Lactation and infant feeding support bundles combining prenatal preparation, postpartum consultations, and follow-up care.";
 
 export const Route = createFileRoute("/services/packages")({
   head: () => ({
@@ -28,8 +28,8 @@ function Packages() {
         {/* Hero */}
             <section className="page-hero">
               <div className="container">
-                <h1>Packages</h1>
-                <p className="lead">Lactation and infant feeding support packages combining prenatal preparation, postpartum consultations, and follow-up care.</p>
+                <h1>Bundles</h1>
+                <p className="lead">Lactation and infant feeding support bundles combining prenatal preparation, postpartum consultations, and follow-up care.</p>
               </div>
             </section>
 

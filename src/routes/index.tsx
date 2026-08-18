@@ -209,7 +209,7 @@ function Index() {
                           <h4 className="faq-question">9. Are your services covered by insurance?</h4>
                           <p className="faq-answer">Our services are not directly covered by OHIP, but they may be covered by some private insurances, extended health benefits, or a Health Spending Account. Coverage depends on your individual plan, so we recommend checking with your insurance provider before booking.</p>
                           <h4 className="faq-question">10. What payment methods do you accept?</h4>
-                          <p className="faq-answer">We accept all major credit card, e-transfer, and wire transfers.</p>
+                          <p className="faq-answer">We accept all major credit card, e-transfer, wire transfers, and cash.</p>
                         </div>
                       </div>
                     </div>
@@ -223,7 +223,7 @@ function Index() {
               <div className="container">
                 <div className="cta-content">
                   <p className="eyebrow">Ready to start?</p>
-                  <h2>Every feeding journey is unique<br /><em>Let's find yours</em></h2>
+                  <h2>You don't have to figure out the next feed alone.<br /><em>Get the support and guidance you need.</em></h2>
                   <button type="button" className="btn btn-cream" disabled={true}>Book a consultation</button>
                   <p className="cta-footnote">Have questions? Contact us at <a href="/contact">hello@feedbyfeed.com</a></p>
                 </div>

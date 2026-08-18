@@ -163,7 +163,7 @@ function PrenatalServices() {
                   <article className="service-nav-card">
                     <h3>Looking for ongoing support?</h3>
                     <p>Combine prenatal preparation and postpartum care for continued support as your feeding journey evolves.</p>
-                    <a href="/services/packages" className="btn btn-outline">Explore Packages →</a>
+                    <a href="/services/packages" className="btn btn-outline">Explore Bundles →</a>
                   </article>
                 </div>
               </div>
