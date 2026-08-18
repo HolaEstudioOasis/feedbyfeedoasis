@@ -32,8 +32,9 @@ function Index() {
             <section className="hero section">
               <div className="container">
                 <div className="hero-content">
-                  <h1>Empowering your family for a <em>confident</em> feeding journey.</h1>
-                  <p className="lead">Personalized clinical support for breastfeeding, pumping, and infant nutrition in the comfort of your home.</p>
+                  <h1>Feel more confident feeding your baby, <em>one feed at a time.</em></h1>
+                  <p className="lead">Warm, evidence-based support for breastfeeding, pumping, bottle feeding and more. At home across Toronto &amp; the GTA, or virtually wherever you are.</p>
+
                   <div className="hero-actions">
                     <button type="button" className="btn btn-primary" disabled={true}>Book Now</button>
                     <a href="/about" className="link-inline">About Alicia</a>
