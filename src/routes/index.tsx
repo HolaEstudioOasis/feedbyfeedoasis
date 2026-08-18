@@ -86,7 +86,7 @@ function Index() {
                     </div>
                     <h3>Prenatal Services</h3>
                     <p className="service-card-desc">Know what to expect before baby arrives.</p>
-                    <a href="/services/prenatal-services" className="btn btn-primary">More info</a>
+                    <a href="/services/prenatal-services" className="btn btn-primary">Explore prenatal support</a>
                   </article>
 
                   <article className="service-card">
@@ -97,7 +97,7 @@ function Index() {
                     </div>
                     <h3>Lactation Consultations</h3>
                     <p className="service-card-desc">Hands-on or virtual help for breastfeeding, pumping, bottles, supply and feeding challenges.</p>
-                    <a href="/services/lactation-consultations" className="btn btn-primary">More info</a>
+                    <a href="/services/lactation-consultations" className="btn btn-primary">Explore consultations</a>
                   </article>
 
                   <article className="service-card">
@@ -108,7 +108,7 @@ function Index() {
                     </div>
                     <h3>Bundles</h3>
                     <p className="service-card-desc">Ongoing support when you want someone in your corner beyond one visit.</p>
-                    <a href="/services/packages" className="btn btn-primary">More info</a>
+                    <a href="/services/packages" className="btn btn-primary">Explore bundles</a>
 
                   </article>
                 </div>
@@ -225,7 +225,7 @@ function Index() {
               <div className="container">
                 <div className="cta-content">
                   <p className="eyebrow">Ready to start?</p>
-                  <h2>You don't have to figure out the next feed alone.<br /><em>Get the support and guidance you need.</em></h2>
+                  <h2>You don't have to figure out the next feed alone<br /><em>Get the support and guidance you need</em></h2>
                   <button type="button" className="btn btn-cream" disabled={true}>Book a consultation</button>
                   <p className="cta-footnote">Have questions? Contact us at <a href="/contact">hello@feedbyfeed.com</a></p>
                 </div>

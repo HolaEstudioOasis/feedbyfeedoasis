@@ -620,8 +620,12 @@ a.img-placeholder {
 }
 
 .service-card .btn {
-  margin-top: 20px;
+  margin-top: auto;
   align-self: center;
+}
+
+.service-card-desc + .btn {
+  margin-top: 20px;
 }
 
 /* ==========================================================================
@@ -1980,8 +1984,9 @@ a.img-placeholder {
   color: var(--text-muted-on-light, inherit);
   font-size: 0.95rem;
   line-height: 1.5;
-  margin: -6px 0 4px;
+  margin: -6px auto 20px;
   max-width: 34ch;
+  text-align: center;
 }
 
 .reviews-carousel {
