@@ -81,14 +81,15 @@ function About() {
                     <h3>Bachelor's degree in Nutrition</h3>
                   </div>
                   <div className="credential-card">
-                    <h3>10+</h3>
-                    <p>years of healthcare experience</p>
+                    <h3>10+ years</h3>
+                    <p>across nutrition, healthcare and family education</p>
                   </div>
                   <div className="credential-card">
-                    <h3>Bilingual Support</h3>
+                    <h3>Bilingual care</h3>
                     <p>English &amp; Spanish</p>
                   </div>
                 </div>
+
               </div>
             </section>
 
