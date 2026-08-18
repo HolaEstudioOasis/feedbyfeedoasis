@@ -2144,3 +2144,23 @@ a.img-placeholder {
   background: var(--crema-marfil);
   color: var(--text-on-light);
 }
+
+/* Hero — mobile overlay (vertical gradient) */
+@media (max-width: 760px) {
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(22, 35, 81, 0.94) 0%,
+      rgba(22, 35, 81, 0.88) 55%,
+      rgba(22, 35, 81, 0.7) 100%
+    );
+  }
+
+  .hero-slide {
+    object-position: center;
+  }
+
+  .hero-content {
+    max-width: none;
+  }
+}
