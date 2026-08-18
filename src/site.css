@@ -595,25 +595,36 @@ a.img-placeholder {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 22px;
+  bottom: 8px;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  z-index: 2;
+  gap: 4px;
+  z-index: 3;
 }
 
 .hero-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.hero-dot::after {
+  content: "";
   width: 11px;
   height: 11px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--crema-marfil);
   background: rgba(242, 231, 211, 0.25);
-  padding: 0;
-  cursor: pointer;
   transition: background var(--transition-base);
 }
 
-.hero-dot.is-active {
+.hero-dot.is-active::after {
   background: var(--crema-marfil);
 }
 
@@ -621,7 +632,13 @@ a.img-placeholder {
   position: relative;
   z-index: 1;
   padding-block: clamp(72px, 9vw, 140px);
+  pointer-events: none;
 }
+
+.hero--fullbleed .hero-content {
+  pointer-events: auto;
+}
+
 
 .hero-content {
   max-width: 620px;
