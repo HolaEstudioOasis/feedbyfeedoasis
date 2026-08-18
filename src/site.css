@@ -586,12 +586,14 @@ a.img-placeholder {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  align-items: stretch;
 }
 
 .service-card {
   display: flex;
   flex-direction: column;
   text-align: center;
+  height: 100%;
 }
 
 .service-card .img-placeholder,
@@ -618,8 +620,9 @@ a.img-placeholder {
 }
 
 .service-card .btn {
-  margin-top: 20px;
+  margin-top: auto;
   align-self: center;
+  white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -1978,8 +1981,9 @@ a.img-placeholder {
   color: var(--text-muted-on-light, inherit);
   font-size: 0.95rem;
   line-height: 1.5;
-  margin: -6px 0 4px;
+  margin: -6px auto 20px;
   max-width: 34ch;
+  text-align: center;
 }
 
 .reviews-carousel {
