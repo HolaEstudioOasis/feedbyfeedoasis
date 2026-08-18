@@ -58,9 +58,10 @@ function Index() {
                   />
                 </div>
                 <div className="intro-content">
-                  <p className="eyebrow">Worried about your baby's feeding journey?</p>
-                  <h2>Hi, I'm Alicia. I'm here to bring calm to your table.</h2>
-                  <p className="lead">After navigating my own complex feeding challenges with my two children, I realized no family should walk this path alone or feel judged. As an IBCLC, my mission is to help you build confidence in every single feed.</p>
+                  <p className="eyebrow">Feeding your baby can come with more questions than you expected.</p>
+                  <h2>Hi, I'm Alicia, and I'm here to help feeding feel less overwhelming.</h2>
+                  <p className="lead">After navigating my own feeding challenges with my two boys, I know how hard it can feel when feeding doesn't go the way you expected. I realized no family should have to walk this path alone or feel judged. As an IBCLC and nutrition professional, I'm here to help you understand what's happening and find a realistic plan that works for your baby and your family.</p>
+
                   <a href="/about" className="btn btn-primary">Get to Know Me</a>
                 </div>
               </div>
