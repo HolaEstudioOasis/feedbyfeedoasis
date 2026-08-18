@@ -23,6 +23,22 @@ export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLLIElement | null>(null);
+  const closeTimer = useRef<number | null>(null);
+
+  const cancelClose = () => {
+    if (closeTimer.current !== null) {
+      window.clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  };
+  const openDropdown = () => {
+    cancelClose();
+    setDropdownOpen(true);
+  };
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer.current = window.setTimeout(() => setDropdownOpen(false), 180);
+  };
 
   useEffect(() => {
     document.body.classList.toggle("nav-lock", navOpen);
@@ -35,8 +51,16 @@ export default function Header() {
         setDropdownOpen(false);
       }
     }
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setDropdownOpen(false);
+    }
     document.addEventListener("click", onDocClick);
-    return () => document.removeEventListener("click", onDocClick);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("click", onDocClick);
+      document.removeEventListener("keydown", onKeyDown);
+      cancelClose();
+    };
   }, []);
 
   const isActive = (to: string) => (to === "/" ? pathname === "/" : pathname.startsWith(to));
@@ -69,7 +93,13 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-            <li className={`has-dropdown${dropdownOpen ? " is-open" : ""}`} ref={dropdownRef}>
+            <li
+              className={`has-dropdown${dropdownOpen ? " is-open" : ""}`}
+              ref={dropdownRef}
+              onMouseEnter={openDropdown}
+              onMouseLeave={scheduleClose}
+              onFocus={cancelClose}
+            >
               <button
                 type="button"
                 className="nav-trigger"
