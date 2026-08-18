@@ -419,14 +419,47 @@ a.img-placeholder {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 14px);
+  top: 100%;
   left: 50%;
   transform: translate(-50%, 8px);
   min-width: 240px;
   background: var(--white);
+  background-clip: content-box;
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  padding: 14px 0 0;
+  border: 0;
+}
+
+.dropdown-menu > li:first-child {
+  margin-top: 0;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  inset: 14px 0 0;
+  background: var(--white);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
-  padding: 10px;
+  z-index: -1;
+}
+
+.dropdown-menu > li {
+  position: relative;
+  padding-inline: 10px;
+}
+
+.dropdown-menu > li:first-child {
+  padding-top: 10px;
+}
+
+.dropdown-menu > li:last-child {
+  padding-bottom: 10px;
+}
+
+.dropdown-menu {
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
