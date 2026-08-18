@@ -419,14 +419,47 @@ a.img-placeholder {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 14px);
+  top: 100%;
   left: 50%;
   transform: translate(-50%, 8px);
   min-width: 240px;
   background: var(--white);
+  background-clip: content-box;
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  padding: 14px 0 0;
+  border: 0;
+}
+
+.dropdown-menu > li:first-child {
+  margin-top: 0;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  inset: 14px 0 0;
+  background: var(--white);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
-  padding: 10px;
+  z-index: -1;
+}
+
+.dropdown-menu > li {
+  position: relative;
+  padding-inline: 10px;
+}
+
+.dropdown-menu > li:first-child {
+  padding-top: 10px;
+}
+
+.dropdown-menu > li:last-child {
+  padding-bottom: 10px;
+}
+
+.dropdown-menu {
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -562,25 +595,36 @@ a.img-placeholder {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 22px;
+  bottom: 8px;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  z-index: 2;
+  gap: 4px;
+  z-index: 3;
 }
 
 .hero-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.hero-dot::after {
+  content: "";
   width: 11px;
   height: 11px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--crema-marfil);
   background: rgba(242, 231, 211, 0.25);
-  padding: 0;
-  cursor: pointer;
   transition: background var(--transition-base);
 }
 
-.hero-dot.is-active {
+.hero-dot.is-active::after {
   background: var(--crema-marfil);
 }
 
@@ -588,7 +632,13 @@ a.img-placeholder {
   position: relative;
   z-index: 1;
   padding-block: clamp(72px, 9vw, 140px);
+  pointer-events: none;
 }
+
+.hero--fullbleed .hero-content {
+  pointer-events: auto;
+}
+
 
 .hero-content {
   max-width: 620px;
@@ -1691,11 +1741,20 @@ a.img-placeholder {
     transition: max-height var(--transition-base), padding var(--transition-base);
   }
 
+  .has-dropdown .dropdown-menu::before {
+    display: none;
+  }
+
+  .has-dropdown .dropdown-menu > li {
+    padding: 0;
+  }
+
   .has-dropdown.is-open .dropdown-menu {
     max-height: 260px;
     padding: 6px 10px;
     transform: none;
   }
+
 
   .dropdown-menu a {
     color: var(--text-on-dark);

@@ -12,6 +12,7 @@ const slides = [
 export default function HeroCarousel() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [tick, setTick] = useState(0);
   const reducedRef = useRef(false);
 
   useEffect(() => {
@@ -21,7 +22,12 @@ export default function HeroCarousel() {
     if (reducedRef.current || paused) return;
     const id = window.setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
     return () => window.clearInterval(id);
-  }, [paused]);
+  }, [paused, tick]);
+
+  const goTo = (i: number) => {
+    setIndex(i);
+    setTick((t) => t + 1); // restart autoplay timer
+  };
 
   return (
     <div
@@ -46,12 +52,13 @@ export default function HeroCarousel() {
             key={s.url}
             type="button"
             className={`hero-dot${i === index ? " is-active" : ""}`}
-            aria-label={`Show photo ${i + 1} of ${slides.length}`}
-            aria-current={i === index}
-            onClick={() => setIndex(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            aria-current={i === index ? "true" : undefined}
+            onClick={() => goTo(i)}
           />
         ))}
       </div>
     </div>
   );
 }
+
