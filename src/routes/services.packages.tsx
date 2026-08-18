@@ -41,7 +41,7 @@ function Packages() {
                   <div className="package-content">
                     <h2>Prenatal + Postpartum Support</h2>
                     <p className="package-tag">In home prenatal</p>
-                    <p className="package-desc">A complete support package that begins with prenatal breastfeeding preparation and continues through the early postpartum period, with follow-up care available throughout your feeding journey.</p>
+                    <p className="package-desc">A complete support bundle that begins with prenatal breastfeeding preparation and continues through the early postpartum period, with follow-up care available throughout your feeding journey.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
                       <li>1 private in-home prenatal breastfeeding consultation</li>
@@ -69,7 +69,7 @@ function Packages() {
                   <div className="package-content">
                     <h2>Prenatal + Postpartum Support</h2>
                     <p className="package-tag">Virtual prenatal</p>
-                    <p className="package-desc">A complete support package that starts with virtual prenatal breastfeeding preparation and continues with personalized lactation care after your baby arrives.</p>
+                    <p className="package-desc">A complete support bundle that starts with virtual prenatal breastfeeding preparation and continues with personalized lactation care after your baby arrives.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
                       <li>1 private virtual prenatal breastfeeding consultation</li>
@@ -94,7 +94,7 @@ function Packages() {
 
                 <article className="package-card">
                   <div className="package-content">
-                    <h2>Postpartum Support Package</h2>
+                    <h2>Postpartum Support Bundle</h2>
                     <p className="package-desc">Ongoing lactation and infant feeding support for families who are already navigating the early days and want continued guidance as their feeding journey develops.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
@@ -166,7 +166,7 @@ function Packages() {
                 <div className="cta-content">
                   <p className="eyebrow">Ready to start?</p>
                   <h2>Support that grows with your feeding journey</h2>
-                  <button type="button" className="btn btn-cream" disabled={true}>Choose Your Package</button>
+                  <button type="button" className="btn btn-cream" disabled={true}>Choose Your Bundle</button>
                   <p className="cta-footnote">Have questions? Contact us at <a href="/contact">hello@feedbyfeed.com</a></p>
                 </div>
               </div>

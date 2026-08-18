@@ -107,7 +107,7 @@ function Contact() {
                         <option value="General question">General question</option>
                         <option value="Prenatal Services">Prenatal Services</option>
                         <option value="Lactation Consultations">Lactation Consultations</option>
-                        <option value="Packages">Packages</option>
+                        <option value="Bundles">Bundles</option>
                       </select>
                     </div>
                   </div>
