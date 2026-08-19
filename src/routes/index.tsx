@@ -36,7 +36,7 @@ function Index() {
               <HeroCarousel />
               <div className="container">
                 <div className="hero-content">
-                  <h1>Feel more confident feeding your baby, <em>one feed at a time.</em></h1>
+                  <h1>Feel more confident feeding your baby, <em className="hero-tagline">one feed at a time.</em></h1>
                   <p className="lead">Warm, evidence-based support for breastfeeding, pumping, bottle feeding and more. At home across Toronto &amp; the GTA, or virtually wherever you are.</p>
 
                   <div className="hero-actions">
