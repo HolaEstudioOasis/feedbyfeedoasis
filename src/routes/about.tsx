@@ -118,7 +118,7 @@ function About() {
                 <div className="cta-content">
                   <h2>Ready to feel more confident<br />about feeding your baby?</h2>
                   <button type="button" className="btn btn-cream" disabled={true}>Book a consultation</button>
-                  <p className="cta-footnote">Have questions? Contact us at <a href="/contact">hello@feedbyfeed.com</a></p>
+                  <p className="cta-footnote">Have questions? Contact us at <a href="mailto:hello@feedbyfeed.com">hello@feedbyfeed.com</a></p>
                 </div>
               </div>
             </section>
