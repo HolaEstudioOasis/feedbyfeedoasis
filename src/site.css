@@ -2211,9 +2211,8 @@ a.img-placeholder {
 
 @media (min-width: 761px) {
   .hero-content h1 {
-    max-width: 19ch;
+    max-width: 520px;
     font-size: clamp(2.4rem, 3.9vw, 3.35rem);
-    text-wrap: balance;
   }
 
   .hero-content {
