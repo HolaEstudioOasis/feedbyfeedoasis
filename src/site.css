@@ -2211,12 +2211,13 @@ a.img-placeholder {
 
 @media (min-width: 761px) {
   .hero-content h1 {
-    max-width: 900px;
+    max-width: 15ch;
     font-size: clamp(2.4rem, 3.9vw, 3.35rem);
+    text-wrap: balance;
   }
 
   .hero-content {
-    max-width: 940px;
+    max-width: 46%;
   }
 
   .hero-content p.lead {
