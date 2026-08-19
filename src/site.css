@@ -2209,6 +2209,16 @@ a.img-placeholder {
   display: block;
 }
 
+@media (min-width: 761px) {
+  .hero-content h1 {
+    max-width: 780px;
+  }
+
+  .hero-content {
+    max-width: 820px;
+  }
+}
+
 /* Hero — mobile framing, height and overlay */
 @media (max-width: 760px) {
   .hero--fullbleed {
