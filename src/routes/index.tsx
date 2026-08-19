@@ -70,7 +70,7 @@ function Index() {
             </section>
 
             {/* Services */}
-            <section className="services section">
+            <section className="services section" id="services">
               <div className="container">
                 <div className="section-head">
                   <h2>Support for your family, <em>one feed at a time</em></h2>
