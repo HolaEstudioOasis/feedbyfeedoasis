@@ -70,7 +70,7 @@ export default function Footer() {
             </svg>
           </a>
           <a href="mailto:hello@feedbyfeed.com" className="social-link" aria-label="Email Feed by Feed">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg viewBox="0 0 24 24" className="social-icon-outline" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
               <path d="m3.5 6.5 8.5 6 8.5-6" />
             </svg>
