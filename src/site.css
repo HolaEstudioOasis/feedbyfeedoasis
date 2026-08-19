@@ -1686,6 +1686,26 @@ a.img-placeholder {
   margin-top: 24px;
 }
 
+.contact-form .has-error {
+  border-color: #b3402f;
+}
+
+.contact-form .has-error:focus-visible {
+  border-color: #b3402f;
+}
+
+.contact-form .field-error {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: #b3402f;
+}
+
+.contact-form .field-label span {
+  color: #b3402f;
+}
+
+
 /* ==========================================================================
    Responsive — tablet
    ========================================================================== */
