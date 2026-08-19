@@ -41,7 +41,7 @@ function Index() {
 
                   <div className="hero-actions">
                     <button type="button" className="btn btn-primary" disabled={true}>Book Now</button>
-                    <a href="/about" className="link-inline">About Alicia</a>
+                    <a href="#services" className="btn btn-hero-outline">Our Services</a>
                   </div>
                 </div>
               </div>
