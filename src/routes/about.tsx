@@ -103,15 +103,10 @@ function About() {
                   <p className="lead">From in-home lactation consultations across Toronto and the GTA to virtual appointments anywhere you are, every recommendation is built around your baby, your family, and what matters most to you.</p>
                 </div>
 
-                <div className="mission-grid">
+                <div className="mission-grid mission-grid--single">
                   <div className="mission-card">
-                    <p className="eyebrow eyebrow--ocre">Why we're here</p>
+                    <p className="eyebrow eyebrow--ocre">Our Purpose</p>
                     <p>To make feeding feel less overwhelming by giving families practical, evidence-based support that respects their goals, their choices, and real life.</p>
-                  </div>
-                  <div className="mission-card">
-                    <p className="eyebrow eyebrow--ocre">What we hope for</p>
-                    <p>A future where families feel informed, supported and never judged for how they feed their baby.</p>
-
                   </div>
                 </div>
               </div>
