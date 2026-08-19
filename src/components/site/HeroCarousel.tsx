@@ -40,7 +40,7 @@ export default function HeroCarousel() {
           key={s.url}
           src={s.url}
           alt={s.alt}
-          className={`hero-slide${i === index ? " is-active" : ""}`}
+          className={`hero-slide hero-slide--${i + 1}${i === index ? " is-active" : ""}`}
           loading={i === 0 ? "eager" : "lazy"}
           fetchPriority={i === 0 ? "high" : undefined}
         />

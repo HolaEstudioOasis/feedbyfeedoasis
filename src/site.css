@@ -2204,22 +2204,52 @@ a.img-placeholder {
   color: var(--text-on-light);
 }
 
-/* Hero — mobile overlay (vertical gradient) */
+/* Hero — desktop headline break */
+@media (min-width: 761px) {
+  .hero-content h1 .hero-tagline {
+    display: block;
+  }
+}
+
+/* Hero — mobile framing, height and overlay */
 @media (max-width: 760px) {
+  .hero--fullbleed {
+    min-height: 0;
+  }
+
+  .hero--fullbleed .container {
+    padding-block: 44px 56px;
+  }
+
   .hero-overlay {
     background: linear-gradient(
       to bottom,
-      rgba(22, 35, 81, 0.94) 0%,
-      rgba(22, 35, 81, 0.88) 55%,
-      rgba(22, 35, 81, 0.7) 100%
+      rgba(22, 35, 81, 0.9) 0%,
+      rgba(22, 35, 81, 0.78) 45%,
+      rgba(22, 35, 81, 0.38) 72%,
+      rgba(22, 35, 81, 0.18) 100%
     );
   }
 
+  /* Keep faces/baby in frame on portrait crops */
   .hero-slide {
-    object-position: center;
+    object-position: center 28%;
+  }
+
+  .hero-slide--1 {
+    object-position: 55% 30%;
+  }
+
+  .hero-slide--2 {
+    object-position: center 35%;
+  }
+
+  .hero-slide--3 {
+    object-position: 60% 25%;
   }
 
   .hero-content {
     max-width: none;
   }
 }
+
