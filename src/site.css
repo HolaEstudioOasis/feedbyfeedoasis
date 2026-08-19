@@ -2204,11 +2204,9 @@ a.img-placeholder {
   color: var(--text-on-light);
 }
 
-/* Hero — desktop headline break */
-@media (min-width: 761px) {
-  .hero-content h1 .hero-tagline {
-    display: block;
-  }
+/* Hero — headline break before the italic tagline */
+.hero-content h1 .hero-tagline {
+  display: block;
 }
 
 /* Hero — mobile framing, height and overlay */
