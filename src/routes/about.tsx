@@ -96,17 +96,21 @@ function About() {
             {/* Mission & Vision */}
             <section className="mission section">
               <div className="container">
-                <div className="section-head">
-                  <h2>Personalized feeding support for every family</h2>
-                  <p className="lead">Feed by Feed offers personalized lactation and infant feeding support built around your family, not a one-size-fits-all approach.</p>
-                  <p className="lead">Whether you're breastfeeding, pumping, combination feeding, bottle feeding, introducing solids, weaning, or preparing for your baby's arrival, you'll receive practical, evidence-based guidance to help you feel confident every step of the way.</p>
-                  <p className="lead">From in-home lactation consultations across Toronto and the GTA to virtual appointments anywhere you are, every recommendation is built around your baby, your family, and what matters most to you.</p>
-                </div>
+                <div className="mission-layout">
+                  <div className="mission-text">
+                    <div className="section-head">
+                      <h2>Personalized feeding support for every family</h2>
+                      <p className="lead">Feed by Feed offers personalized lactation and infant feeding support built around your family, not a one-size-fits-all approach.</p>
+                      <p className="lead">Whether you're breastfeeding, pumping, combination feeding, bottle feeding, introducing solids, weaning, or preparing for your baby's arrival, you'll receive practical, evidence-based guidance to help you feel confident every step of the way.</p>
+                      <p className="lead">From in-home lactation consultations across Toronto and the GTA to virtual appointments anywhere you are, every recommendation is built around your baby, your family, and what matters most to you.</p>
+                    </div>
+                  </div>
 
-                <div className="mission-grid mission-grid--single">
-                  <div className="mission-card">
-                    <p className="eyebrow eyebrow--ocre">Our Purpose</p>
-                    <p>To make feeding feel less overwhelming by giving families practical, evidence-based support that respects their goals, their choices, and real life.</p>
+                  <div className="mission-aside">
+                    <div className="mission-card">
+                      <p className="eyebrow eyebrow--ocre">Our Purpose</p>
+                      <p>To make feeding feel less overwhelming by giving families practical, evidence-based support that respects their goals, their choices, and real life.</p>
+                    </div>
                   </div>
                 </div>
               </div>
