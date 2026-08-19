@@ -78,7 +78,7 @@ function About() {
                     <p>International Board Certified Lactation Consultant</p>
                   </div>
                   <div className="credential-card">
-                    <h3>Bachelor's degree in Nutrition</h3>
+                    <h3>Bachelor's degree in Clinical Nutrition</h3>
                   </div>
                   <div className="credential-card">
                     <h3>10+ years</h3>
