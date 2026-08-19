@@ -2,11 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import slide1 from "@/assets/carrusel-1.webp.asset.json";
 import slide2 from "@/assets/carrusel-2.webp.asset.json";
 import slide3 from "@/assets/carrusel-3.webp.asset.json";
+import slide1v from "@/assets/carrusel-1-vertical.webp.asset.json";
+import slide2v from "@/assets/carrusel-2-vertical.webp.asset.json";
+import slide3v from "@/assets/carrusel-3-vertical.webp.asset.json";
 
 const slides = [
-  { url: slide1.url, alt: "Two women smiling as they hold a baby together outdoors" },
-  { url: slide2.url, alt: "Parents holding their newborn baby close together, foreheads touching" },
-  { url: slide3.url, alt: "A father smiling as he spoon feeds his baby in a high chair" },
+  { url: slide1.url, mobile: slide1v.url, alt: "Two women smiling as they hold a baby together outdoors" },
+  { url: slide2.url, mobile: slide2v.url, alt: "Parents holding their newborn baby close together, foreheads touching" },
+  { url: slide3.url, mobile: slide3v.url, alt: "A father smiling as he spoon feeds his baby in a high chair" },
 ];
 
 export default function HeroCarousel() {
@@ -36,14 +39,16 @@ export default function HeroCarousel() {
       onMouseLeave={() => setPaused(false)}
     >
       {slides.map((s, i) => (
-        <img
-          key={s.url}
-          src={s.url}
-          alt={s.alt}
-          className={`hero-slide hero-slide--${i + 1}${i === index ? " is-active" : ""}`}
-          loading={i === 0 ? "eager" : "lazy"}
-          fetchPriority={i === 0 ? "high" : undefined}
-        />
+        <picture key={s.url}>
+          <source media="(max-width: 767px)" srcSet={s.mobile} />
+          <img
+            src={s.url}
+            alt={s.alt}
+            className={`hero-slide hero-slide--${i + 1}${i === index ? " is-active" : ""}`}
+            loading={i === 0 ? "eager" : "lazy"}
+            fetchPriority={i === 0 ? "high" : undefined}
+          />
+        </picture>
       ))}
       <div className="hero-overlay" aria-hidden="true" />
       <div className="hero-dots">
