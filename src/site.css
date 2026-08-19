@@ -2244,21 +2244,12 @@ a.img-placeholder {
     );
   }
 
-  /* Keep faces/baby in frame on portrait crops */
-  .hero-slide {
-    object-position: center 28%;
-  }
-
-  .hero-slide--1 {
-    object-position: 55% 30%;
-  }
-
-  .hero-slide--2 {
-    object-position: center 35%;
-  }
-
+  /* Vertical crops on mobile: keep faces centred */
+  .hero-slide,
+  .hero-slide--1,
+  .hero-slide--2,
   .hero-slide--3 {
-    object-position: 60% 25%;
+    object-position: center center;
   }
 
   .hero-content {
