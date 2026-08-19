@@ -20,37 +20,69 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
-function handleContactSubmit(event: React.FormEvent<HTMLFormElement>) {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const value = (id: string) =>
-    (form.querySelector(`#${id}`) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null)?.value.trim() ??
-    "";
+type FieldErrors = { name?: string; email?: string; message?: string };
 
-  const name = value("contact-name");
-  const email = value("contact-email");
-  const phone = value("contact-phone");
-  const reason = value("contact-reason");
-  const message = value("contact-message");
-
-  const bodyLines = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    phone ? `Phone: ${phone}` : null,
-    `Interested in: ${reason}`,
-    "",
-    message,
-  ].filter((line): line is string => line !== null);
-
-  window.location.href =
-    "mailto:hello@feedbyfeed.com" +
-    "?subject=" +
-    encodeURIComponent(`Website inquiry from ${name}`) +
-    "&body=" +
-    encodeURIComponent(bodyLines.join("\n"));
-}
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 function Contact() {
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    reason: "General question",
+    message: "",
+  });
+  const [errors, setErrors] = useState<FieldErrors>({});
+
+  function validate(v: typeof values): FieldErrors {
+    const next: FieldErrors = {};
+    if (!v.name.trim()) next.name = "Please enter your name";
+    if (!v.email.trim()) next.email = "Please enter your email";
+    else if (!EMAIL_RE.test(v.email.trim())) next.email = "Please enter a valid email address";
+    if (!v.message.trim()) next.message = "Please enter a message";
+    return next;
+  }
+
+  function update(field: keyof typeof values, value: string) {
+    const next = { ...values, [field]: value };
+    setValues(next);
+    if (errors[field as keyof FieldErrors]) {
+      const revalidated = validate(next);
+      setErrors((prev) => ({ ...prev, [field]: revalidated[field as keyof FieldErrors] }));
+    }
+  }
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const nextErrors = validate(values);
+    setErrors(nextErrors);
+
+    const firstInvalid = (["name", "email", "message"] as const).find((f) => nextErrors[f]);
+    if (firstInvalid) {
+      const el = document.getElementById(`contact-${firstInvalid}`);
+      el?.scrollIntoView({ behavior: "smooth", block: "center" });
+      (el as HTMLElement | null)?.focus({ preventScroll: true });
+      return;
+    }
+
+    const bodyLines = [
+      `Name: ${values.name.trim()}`,
+      `Email: ${values.email.trim()}`,
+      values.phone.trim() ? `Phone: ${values.phone.trim()}` : null,
+      `Interested in: ${values.reason}`,
+      "",
+      values.message.trim(),
+    ].filter((line): line is string => line !== null);
+
+    window.location.href =
+      "mailto:hello@feedbyfeed.com" +
+      "?subject=" +
+      encodeURIComponent(`Website inquiry from ${values.name.trim()}`) +
+      "&body=" +
+      encodeURIComponent(bodyLines.join("\n"));
+  }
+
+
   return (
     <SiteLayout>
       <main>
