@@ -4,9 +4,9 @@ import slide2 from "@/assets/carrusel-2.webp.asset.json";
 import slide3 from "@/assets/carrusel-3.webp.asset.json";
 
 const slides = [
-  { url: slide1.url, alt: "Parents holding their newborn baby together at home, foreheads touching" },
-  { url: slide2.url, alt: "Baby in a high chair being spoon fed by two smiling parents" },
-  { url: slide3.url, alt: "Two women smiling and holding a baby outdoors in a garden" },
+  { url: slide1.url, alt: "Two women smiling as they hold a baby together outdoors" },
+  { url: slide2.url, alt: "Parents holding their newborn baby close together, foreheads touching" },
+  { url: slide3.url, alt: "A father smiling as he spoon feeds his baby in a high chair" },
 ];
 
 export default function HeroCarousel() {

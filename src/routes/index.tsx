@@ -41,7 +41,7 @@ function Index() {
 
                   <div className="hero-actions">
                     <button type="button" className="btn btn-primary" disabled={true}>Book Now</button>
-                    <a href="/about" className="link-inline">About Alicia</a>
+                    <a href="#services" className="btn btn-hero-outline">Our Services</a>
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ function Index() {
                 </div>
                 <div className="intro-content">
                   <p className="eyebrow">Feeding your baby can come with more questions than you expected.</p>
-                  <h2>Hi, I'm Alicia, and I'm here to help feeding feel less overwhelming.</h2>
+                  <h2>Hi, I'm Alicia. I help feeding feel less overwhelming.</h2>
                   <p className="lead">After navigating my own feeding challenges with my two boys, I know how hard it can feel when feeding doesn't go the way you expected. I realized no family should have to walk this path alone or feel judged. As an IBCLC and nutrition professional, I'm here to help you understand what's happening and find a realistic plan that works for your baby and your family.</p>
 
                   <a href="/about" className="btn btn-primary">Get to Know Me</a>
@@ -70,7 +70,7 @@ function Index() {
             </section>
 
             {/* Services */}
-            <section className="services section">
+            <section className="services section" id="services">
               <div className="container">
                 <div className="section-head">
                   <h2>Support for your family, <em>one feed at a time</em></h2>
@@ -227,7 +227,7 @@ function Index() {
                   <p className="eyebrow">Ready to start?</p>
                   <h2>You don't have to figure out the next feed alone<br /><em>Get the support and guidance you need</em></h2>
                   <button type="button" className="btn btn-cream" disabled={true}>Book a consultation</button>
-                  <p className="cta-footnote">Have questions? Contact us at <a href="/contact">hello@feedbyfeed.com</a></p>
+                  <p className="cta-footnote">Have questions? Contact us at <a href="mailto:hello@feedbyfeed.com">hello@feedbyfeed.com</a></p>
                 </div>
               </div>
             </section>

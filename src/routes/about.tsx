@@ -78,7 +78,7 @@ function About() {
                     <p>International Board Certified Lactation Consultant</p>
                   </div>
                   <div className="credential-card">
-                    <h3>Bachelor's degree in Nutrition</h3>
+                    <h3>Bachelor's degree in Clinical Nutrition</h3>
                   </div>
                   <div className="credential-card">
                     <h3>10+ years</h3>
@@ -103,15 +103,10 @@ function About() {
                   <p className="lead">From in-home lactation consultations across Toronto and the GTA to virtual appointments anywhere you are, every recommendation is built around your baby, your family, and what matters most to you.</p>
                 </div>
 
-                <div className="mission-grid">
+                <div className="mission-grid mission-grid--single">
                   <div className="mission-card">
-                    <p className="eyebrow eyebrow--ocre">Why we're here</p>
+                    <p className="eyebrow eyebrow--ocre">Our Purpose</p>
                     <p>To make feeding feel less overwhelming by giving families practical, evidence-based support that respects their goals, their choices, and real life.</p>
-                  </div>
-                  <div className="mission-card">
-                    <p className="eyebrow eyebrow--ocre">What we hope for</p>
-                    <p>A future where families feel informed, supported and never judged for how they feed their baby.</p>
-
                   </div>
                 </div>
               </div>
@@ -123,7 +118,7 @@ function About() {
                 <div className="cta-content">
                   <h2>Ready to feel more confident<br />about feeding your baby?</h2>
                   <button type="button" className="btn btn-cream" disabled={true}>Book a consultation</button>
-                  <p className="cta-footnote">Have questions? Contact us at <a href="/contact">hello@feedbyfeed.com</a></p>
+                  <p className="cta-footnote">Have questions? Contact us at <a href="mailto:hello@feedbyfeed.com">hello@feedbyfeed.com</a></p>
                 </div>
               </div>
             </section>
