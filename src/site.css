@@ -2264,14 +2264,28 @@ a.img-placeholder {
   stroke: var(--text-on-dark);
 }
 
-/* About — single "Our Purpose" block, centered full width */
-.mission-grid--single {
-  grid-template-columns: 1fr;
+/* About — mission layout: text + purpose card side by side on desktop */
+.mission-layout {
+  display: grid;
+  gap: 32px;
 }
 
-.mission-grid--single .mission-card {
+.mission-layout .mission-card {
   width: 100%;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .mission-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: clamp(40px, 5vw, 80px);
+  }
+
+  .mission-layout .mission-text .section-head {
+    max-width: none;
+    margin-bottom: 0;
+  }
 }
 
 /* Hero — secondary CTA as outline button */
