@@ -86,7 +86,7 @@ function Index() {
                     </div>
                     <h3>Prenatal Services</h3>
                     <p className="service-card-desc">Know what to expect before baby arrives.</p>
-                    <a href="/services/prenatal-services" className="btn btn-primary">Explore prenatal support</a>
+                    <a href="/services/prenatal-services" className="btn btn-primary">Explore Prenatal Support</a>
                   </article>
 
                   <article className="service-card">
@@ -97,7 +97,7 @@ function Index() {
                     </div>
                     <h3>Lactation Consultations</h3>
                     <p className="service-card-desc">Hands-on or virtual help for breastfeeding, pumping, bottles, supply and feeding challenges.</p>
-                    <a href="/services/lactation-consultations" className="btn btn-primary">Explore consultations</a>
+                    <a href="/services/lactation-consultations" className="btn btn-primary">Explore Consultations</a>
                   </article>
 
                   <article className="service-card">
@@ -108,7 +108,7 @@ function Index() {
                     </div>
                     <h3>Bundles</h3>
                     <p className="service-card-desc">Ongoing support when you want someone in your corner beyond one visit.</p>
-                    <a href="/services/packages" className="btn btn-primary">Explore bundles</a>
+                    <a href="/services/packages" className="btn btn-primary">Explore Bundles</a>
 
                   </article>
                 </div>

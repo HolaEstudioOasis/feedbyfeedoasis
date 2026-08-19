@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import SiteLayout from "@/components/site/SiteLayout";
+
 
 const title = "Contact | Feed by Feed";
 const description = "Get in touch with Feed by Feed — questions, service inquiries, or ready to book your first consultation.";
@@ -18,37 +20,69 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
-function handleContactSubmit(event: React.FormEvent<HTMLFormElement>) {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const value = (id: string) =>
-    (form.querySelector(`#${id}`) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null)?.value.trim() ??
-    "";
+type FieldErrors = { name?: string; email?: string; message?: string };
 
-  const name = value("contact-name");
-  const email = value("contact-email");
-  const phone = value("contact-phone");
-  const reason = value("contact-reason");
-  const message = value("contact-message");
-
-  const bodyLines = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    phone ? `Phone: ${phone}` : null,
-    `Interested in: ${reason}`,
-    "",
-    message,
-  ].filter((line): line is string => line !== null);
-
-  window.location.href =
-    "mailto:hello@feedbyfeed.com" +
-    "?subject=" +
-    encodeURIComponent(`Website inquiry from ${name}`) +
-    "&body=" +
-    encodeURIComponent(bodyLines.join("\n"));
-}
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 function Contact() {
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    reason: "General question",
+    message: "",
+  });
+  const [errors, setErrors] = useState<FieldErrors>({});
+
+  function validate(v: typeof values): FieldErrors {
+    const next: FieldErrors = {};
+    if (!v.name.trim()) next.name = "Please enter your name";
+    if (!v.email.trim()) next.email = "Please enter your email";
+    else if (!EMAIL_RE.test(v.email.trim())) next.email = "Please enter a valid email address";
+    if (!v.message.trim()) next.message = "Please enter a message";
+    return next;
+  }
+
+  function update(field: keyof typeof values, value: string) {
+    const next = { ...values, [field]: value };
+    setValues(next);
+    if (errors[field as keyof FieldErrors]) {
+      const revalidated = validate(next);
+      setErrors((prev) => ({ ...prev, [field]: revalidated[field as keyof FieldErrors] }));
+    }
+  }
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const nextErrors = validate(values);
+    setErrors(nextErrors);
+
+    const firstInvalid = (["name", "email", "message"] as const).find((f) => nextErrors[f]);
+    if (firstInvalid) {
+      const el = document.getElementById(`contact-${firstInvalid}`);
+      el?.scrollIntoView({ behavior: "smooth", block: "center" });
+      (el as HTMLElement | null)?.focus({ preventScroll: true });
+      return;
+    }
+
+    const bodyLines = [
+      `Name: ${values.name.trim()}`,
+      `Email: ${values.email.trim()}`,
+      values.phone.trim() ? `Phone: ${values.phone.trim()}` : null,
+      `Interested in: ${values.reason}`,
+      "",
+      values.message.trim(),
+    ].filter((line): line is string => line !== null);
+
+    window.location.href =
+      "mailto:hello@feedbyfeed.com" +
+      "?subject=" +
+      encodeURIComponent(`Website inquiry from ${values.name.trim()}`) +
+      "&body=" +
+      encodeURIComponent(bodyLines.join("\n"));
+  }
+
+
   return (
     <SiteLayout>
       <main>
@@ -84,41 +118,97 @@ function Contact() {
                   </div>
                 </div>
 
-                <form className="contact-form" onSubmit={handleContactSubmit}>
+                <form className="contact-form" onSubmit={handleSubmit} noValidate>
                   <div className="contact-form-row">
                     <div>
-                      <label className="field-label" htmlFor="contact-name">Name</label>
-                      <input type="text" id="contact-name" name="name" placeholder="Your name" required={true} />
+                      <label className="field-label" htmlFor="contact-name">Name <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="contact-name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                        value={values.name}
+                        onChange={(e) => update("name", e.target.value)}
+                        aria-invalid={errors.name ? true : undefined}
+                        aria-describedby={errors.name ? "contact-name-error" : undefined}
+                        className={errors.name ? "has-error" : undefined}
+                      />
+                      {errors.name && (
+                        <p className="field-error" id="contact-name-error">{errors.name}</p>
+                      )}
                     </div>
                     <div>
-                      <label className="field-label" htmlFor="contact-email">Email</label>
-                      <input type="email" id="contact-email" name="email" placeholder="you@example.com" required={true} />
+                      <label className="field-label" htmlFor="contact-email">Email <span aria-hidden="true">*</span></label>
+                      <input
+                        type="email"
+                        id="contact-email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                        value={values.email}
+                        onChange={(e) => update("email", e.target.value)}
+                        aria-invalid={errors.email ? true : undefined}
+                        aria-describedby={errors.email ? "contact-email-error" : undefined}
+                        className={errors.email ? "has-error" : undefined}
+                      />
+                      {errors.email && (
+                        <p className="field-error" id="contact-email-error">{errors.email}</p>
+                      )}
                     </div>
                   </div>
 
                   <div className="contact-form-row contact-form-field">
                     <div>
                       <label className="field-label" htmlFor="contact-phone">Phone (optional)</label>
-                      <input type="tel" id="contact-phone" name="phone" placeholder="Your phone number" />
+                      <input
+                        type="tel"
+                        id="contact-phone"
+                        name="phone"
+                        placeholder="Your phone number"
+                        value={values.phone}
+                        onChange={(e) => update("phone", e.target.value)}
+                      />
                     </div>
                     <div>
-                      <label className="field-label" htmlFor="contact-reason">I'm interested in</label>
-                      <select id="contact-reason" name="reason">
+                      <label className="field-label" htmlFor="contact-reason">I'm interested in <span aria-hidden="true">*</span></label>
+                      <select
+                        id="contact-reason"
+                        name="reason"
+                        required
+                        value={values.reason}
+                        onChange={(e) => update("reason", e.target.value)}
+                      >
                         <option value="General question">General question</option>
                         <option value="Prenatal Services">Prenatal Services</option>
                         <option value="Lactation Consultations">Lactation Consultations</option>
                         <option value="Bundles">Bundles</option>
+                        <option value="Speaking &amp; Events">Speaking &amp; Events</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="contact-form-field">
-                    <label className="field-label" htmlFor="contact-message">Message</label>
-                    <textarea id="contact-message" name="message" placeholder="Tell us a bit about how we can help." required={true}></textarea>
+                    <label className="field-label" htmlFor="contact-message">Message <span aria-hidden="true">*</span></label>
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      placeholder="Tell us a bit about how we can help."
+                      required
+                      value={values.message}
+                      onChange={(e) => update("message", e.target.value)}
+                      aria-invalid={errors.message ? true : undefined}
+                      aria-describedby={errors.message ? "contact-message-error" : undefined}
+                      className={errors.message ? "has-error" : undefined}
+                    ></textarea>
+                    {errors.message && (
+                      <p className="field-error" id="contact-message-error">{errors.message}</p>
+                    )}
                   </div>
 
                   <button type="submit" className="btn btn-primary">Send Message</button>
                 </form>
+
 
               </div>
             </section>
