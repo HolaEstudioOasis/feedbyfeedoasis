@@ -76,6 +76,7 @@ export default function Footer() {
               <path d="m3.5 6.5 8.5 6 8.5-6" />
             </svg>
           </a>
+          </div>
           <nav className="footer-legal" aria-label="Legal">
             <Link to="/terms-of-service">Terms of Service</Link>
             <Link to="/privacy-policy">Privacy Policy</Link>
