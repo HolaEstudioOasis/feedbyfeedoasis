@@ -76,10 +76,11 @@ export default function Footer() {
             </svg>
           </a>
           <nav className="footer-legal" aria-label="Legal">
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Cancellation Policy</a>
+            <Link to="/terms-of-service">Terms of Service</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/cancellation-policy">Cancellation Policy</Link>
           </nav>
+
           <p className="footer-copy">© 2026 Feed by Feed. All rights reserved.</p>
         </div>
       </div>
