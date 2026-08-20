@@ -30,6 +30,7 @@ export async function sendContactEmail(input: ContactFormInput) {
     input.phone ? `Phone: ${input.phone}` : "Phone: Not provided",
     `Interested in: ${input.reason}`,
     "",
+    "Message:",
     input.message,
   ];
 
