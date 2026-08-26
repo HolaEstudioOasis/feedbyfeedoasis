@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import slide1 from "@/assets/carrusel-1.webp.asset.json";
-import slide2 from "@/assets/carrusel-2.webp.asset.json";
+import slide2 from "@/assets/carrusel-2b.webp.asset.json";
 import slide3 from "@/assets/carrusel-3.webp.asset.json";
 import slide1v from "@/assets/carrusel-1-vertical.webp.asset.json";
 import slide2v from "@/assets/carrusel-2-vertical.webp.asset.json";
@@ -8,7 +8,7 @@ import slide3v from "@/assets/carrusel-3-vertical.webp.asset.json";
 
 const slides = [
   { url: slide1.url, mobile: slide1v.url, alt: "Two women smiling as they hold a baby together outdoors" },
-  { url: slide2.url, mobile: slide2v.url, alt: "Parents holding their newborn baby close together, foreheads touching" },
+  { url: slide2.url, mobile: slide2v.url, alt: "Parents sharing a quiet moment together while holding their newborn baby at home" },
   { url: slide3.url, mobile: slide3v.url, alt: "A father smiling as he spoon feeds his baby in a high chair" },
 ];
 
