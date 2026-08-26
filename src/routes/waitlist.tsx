@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoCrema from "@/assets/logo-crema.svg.asset.json";
-import bgAsset from "@/assets/carrusel-2.webp.asset.json";
+import bgAsset from "@/assets/waitlist-bg.webp.asset.json";
 
 const WAITLIST_ACTION =
   "https://assets.mailerlite.com/jsonp/2570708/forms/196877723998619006/subscribe";
@@ -68,7 +68,11 @@ function Waitlist() {
 
   return (
     <main className="waitlist">
-      <img src={bgAsset.url} alt="" aria-hidden="true" className="waitlist-bg" />
+      <img
+        src={bgAsset.url}
+        alt="A family with their newborn and young son sharing a tender moment in a bright, sunlit room"
+        className="waitlist-bg"
+      />
       <div className="waitlist-overlay" aria-hidden="true" />
 
       <div className="waitlist-inner">
