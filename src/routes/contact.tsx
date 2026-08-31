@@ -228,7 +228,7 @@ function Contact() {
                     >
                       <option value="General question">General question</option>
                       <option value="Prenatal Support">Prenatal Support</option>
-                      <option value="Lactation &amp; Feeding Consultations">Lactation &amp; Feeding Consultations</option>
+                      <option value="Lactation & Feeding Consultations">Lactation &amp; Feeding Consultations</option>
                       <option value="Bundles">Bundles</option>
                       <option value="Speaking &amp; Events">Speaking &amp; Events</option>
                     </select>

@@ -4,7 +4,7 @@ import lactation1 from "@/assets/lactation-1.webp.asset.json";
 import lactation2 from "@/assets/lactation-2.webp.asset.json";
 import lactation3 from "@/assets/lactation-3.webp.asset.json";
 
-const title = "Lactation &amp; Feeding Consultations | Feed by Feed";
+const title = "Lactation & Feeding Consultations | Feed by Feed";
 const description = "Support for families navigating breastfeeding, pumping, bottle feeding, and other feeding challenges.";
 
 export const Route = createFileRoute("/services/lactation-consultations")({
