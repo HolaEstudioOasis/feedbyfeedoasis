@@ -41,13 +41,16 @@ function PrenatalServices() {
                   <div className="package-content">
                     <h2>Private Prenatal Breastfeeding Consultation</h2>
                     <p className="package-tag">In home</p>
-                    <p className="package-desc">A personalized in-home prenatal breastfeeding consultation. We'll discuss what to expect during the first days, address your questions, and create a plan that supports your feeding goals.</p>
+                    <p className="package-desc">Breastfeeding preparation, pumping and feeding planning tailored to your goals. We'll discuss what to expect during the first days, address your questions, and create a plan that supports your feeding goals.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
-                      <li>How breastfeeding works during the first days after birth</li>
-                      <li>Practical latch and positioning techniques for a comfortable start</li>
                       <li>What to expect as your milk supply develops</li>
+                      <li>How to know baby is getting enough</li>
+                      <li>Newborn feeding cues</li>
+                      <li>Latch fundamentals</li>
                       <li>How to prepare for common breastfeeding challenges</li>
+                      <li>Partner and support-person role</li>
+                      <li>Pumping and bottle planning when relevant</li>
                     </ul>
                     <div className="package-meta">
                       <div>
