@@ -134,7 +134,7 @@ function LactationConsultations() {
             {/* Additional Notes */}
             <section className="notes section">
               <div className="container">
-                <h2>Additional Notes</h2>
+                <h2>Good to know</h2>
                 <div className="notes-grid">
                   <div className="note-card">
                     <p>Travel fees may apply for home visits outside central Toronto.</p>
@@ -143,7 +143,10 @@ function LactationConsultations() {
                     <p>Weekend and evening appointments may be available upon request.</p>
                   </div>
                   <div className="note-card">
-                    <p>Payment can be made by cash or e-transfer.</p>
+                    <p>We accept all major credit cards, e-transfer, wire transfers, and cash.</p>
+                  </div>
+                  <div className="note-card">
+                    <p>Our services may be covered by some private insurance plans, extended health benefits, or a Health Spending Account.</p>
                   </div>
                 </div>
               </div>
