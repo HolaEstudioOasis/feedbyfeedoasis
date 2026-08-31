@@ -84,18 +84,18 @@ function Index() {
                         <img src={prenatalHomeAsset.url} alt="Prenatal services" className="service-card-img img-placeholder--zoom" loading="lazy" />
                       </a>
                     </div>
-                    <h3>Prenatal Services</h3>
+                    <h3>Prenatal Support</h3>
                     <p className="service-card-desc">Know what to expect before baby arrives.</p>
                     <a href="/services/prenatal-services" className="btn btn-primary">Explore Prenatal Support</a>
                   </article>
 
                   <article className="service-card">
                     <div className="zoom-frame">
-                      <a href="/services/lactation-consultations" className="service-card-img-link" aria-label="Learn more about Lactation Consultations">
+                      <a href="/services/lactation-consultations" className="service-card-img-link" aria-label="Learn more about Lactation &amp; Feeding Consultations">
                         <img src={lactationHomeAsset.url} alt="Lactation consultations" className="service-card-img img-placeholder--zoom" loading="lazy" />
                       </a>
                     </div>
-                    <h3>Lactation Consultations</h3>
+                    <h3>Lactation &amp; Feeding Consultations</h3>
                     <p className="service-card-desc">Hands-on or virtual help for breastfeeding, pumping, bottles, supply and feeding challenges.</p>
                     <a href="/services/lactation-consultations" className="btn btn-primary">Explore Consultations</a>
                   </article>

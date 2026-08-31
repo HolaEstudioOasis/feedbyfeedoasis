@@ -227,8 +227,8 @@ function Contact() {
                       onChange={(e) => update("reason", e.target.value)}
                     >
                       <option value="General question">General question</option>
-                      <option value="Prenatal Services">Prenatal Services</option>
-                      <option value="Lactation Consultations">Lactation Consultations</option>
+                      <option value="Prenatal Support">Prenatal Support</option>
+                      <option value="Lactation &amp; Feeding Consultations">Lactation &amp; Feeding Consultations</option>
                       <option value="Bundles">Bundles</option>
                       <option value="Speaking &amp; Events">Speaking &amp; Events</option>
                     </select>

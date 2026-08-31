@@ -4,7 +4,7 @@ import lactation1 from "@/assets/lactation-1.webp.asset.json";
 import lactation2 from "@/assets/lactation-2.webp.asset.json";
 import lactation3 from "@/assets/lactation-3.webp.asset.json";
 
-const title = "Lactation Consultations | Feed by Feed";
+const title = "Lactation &amp; Feeding Consultations | Feed by Feed";
 const description = "Support for families navigating breastfeeding, pumping, bottle feeding, and other feeding challenges.";
 
 export const Route = createFileRoute("/services/lactation-consultations")({
@@ -28,7 +28,7 @@ function LactationConsultations() {
         {/* Hero */}
             <section className="page-hero">
               <div className="container">
-                <h1>Lactation Consultations</h1>
+                <h1>Lactation &amp; Feeding Consultations</h1>
                 <p className="lead">Support for families navigating breastfeeding, pumping, bottle feeding, and other feeding challenges.</p>
               </div>
             </section>
@@ -160,7 +160,7 @@ function LactationConsultations() {
                   <article className="service-nav-card">
                     <h3>Preparing before your baby arrives?</h3>
                     <p>Get ready for breastfeeding with prenatal consultations and classes designed for expecting families.</p>
-                    <a href="/services/prenatal-services" className="btn btn-outline">Explore Prenatal Services →</a>
+                    <a href="/services/prenatal-services" className="btn btn-outline">Explore Prenatal Support →</a>
                   </article>
                   <article className="service-nav-card">
                     <h3>Want support beyond one consultation?</h3>

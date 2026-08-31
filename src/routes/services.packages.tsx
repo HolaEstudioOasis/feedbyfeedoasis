@@ -149,12 +149,12 @@ function Packages() {
                   <article className="service-nav-card">
                     <h3>Still preparing for baby's arrival?</h3>
                     <p>Explore prenatal breastfeeding consultations and classes to help you feel ready before birth.</p>
-                    <a href="/services/prenatal-services" className="btn btn-outline">Explore Prenatal Services →</a>
+                    <a href="/services/prenatal-services" className="btn btn-outline">Explore Prenatal Support →</a>
                   </article>
                   <article className="service-nav-card">
                     <h3>Already navigating feeding?</h3>
                     <p>Get support with breastfeeding, pumping, milk supply, latch, bottle feeding, and other feeding concerns.</p>
-                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation Consultations →</a>
+                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation &amp; Feeding Consultations →</a>
                   </article>
                 </div>
               </div>

@@ -4,7 +4,7 @@ import prenatal1Asset from "@/assets/prenatal-1.webp.asset.json";
 import prenatal2Asset from "@/assets/prenatal-2.webp.asset.json";
 import prenatal3Asset from "@/assets/prenatal-3.webp.asset.json";
 
-const title = "Prenatal Services | Feed by Feed";
+const title = "Prenatal Support | Feed by Feed";
 const description = "Feel informed, prepared, and confident before your baby's arrival with Feed by Feed's prenatal breastfeeding services.";
 
 export const Route = createFileRoute("/services/prenatal-services")({
@@ -28,7 +28,7 @@ function PrenatalServices() {
         {/* Hero */}
             <section className="page-hero">
               <div className="container">
-                <h1>Prenatal Services</h1>
+                <h1>Prenatal Support</h1>
                 <p className="lead">Feel informed, prepared, and confident before your baby's arrival.</p>
               </div>
             </section>
@@ -158,7 +158,7 @@ function PrenatalServices() {
                   <article className="service-nav-card">
                     <h3>Need support after your baby arrives?</h3>
                     <p>Breastfeeding and infant feeding support for latch, milk supply, pumping, bottle feeding, and other feeding concerns.</p>
-                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation Consultations →</a>
+                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation &amp; Feeding Consultations →</a>
                   </article>
                   <article className="service-nav-card">
                     <h3>Looking for ongoing support?</h3>
