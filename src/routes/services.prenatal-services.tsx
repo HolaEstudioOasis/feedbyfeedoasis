@@ -73,14 +73,16 @@ function PrenatalServices() {
                   <div className="package-content">
                     <h2>Private Prenatal Breastfeeding Consultation</h2>
                     <p className="package-tag">Virtual</p>
-                    <p className="package-desc">The same comprehensive prenatal breastfeeding consultation offered virtually, giving you the flexibility to prepare for your baby's arrival from anywhere.</p>
+                    <p className="package-desc">Prepare from home, wherever you are. We'll cover the same key feeding foundations, answer your questions, and build a plan around your goals, medical history and support system.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
-                      <li>Personalized breastfeeding preparation</li>
-                      <li>Latch and positioning guidance</li>
-                      <li>Milk supply expectations</li>
-                      <li>Newborn feeding during the first days</li>
-                      <li>Recommendations tailored to your family's goals and medical history</li>
+                      <li>What to expect as your milk supply develops</li>
+                      <li>How to know baby is getting enough</li>
+                      <li>Newborn feeding cues</li>
+                      <li>Latch fundamentals</li>
+                      <li>How to prepare for common breastfeeding challenges</li>
+                      <li>Partner and support-person role</li>
+                      <li>Pumping and bottle planning when relevant</li>
                     </ul>
                     <div className="package-meta">
                       <div>
