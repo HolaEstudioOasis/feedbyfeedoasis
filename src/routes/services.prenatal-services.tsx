@@ -105,7 +105,7 @@ function PrenatalServices() {
                   <div className="package-content">
                     <h2>Prenatal Breastfeeding Class</h2>
                     <p className="package-tag">Group session</p>
-                    <p className="package-desc">An interactive class for expecting parents that provides the knowledge and confidence to begin breastfeeding with realistic expectations.</p>
+                    <p className="package-desc">An interactive class for expecting parents that provides the knowledge and confidence to begin breastfeeding with realistic expectations. Partners and support people are welcome.</p>
                     <h3 className="package-list-heading">What You'll Learn</h3>
                     <ul className="package-list">
                       <li>How breastfeeding works during the first days after birth</li>
@@ -114,6 +114,7 @@ function PrenatalServices() {
                       <li>How to recognize newborn feeding cues</li>
                       <li>How your partner can support your breastfeeding goals</li>
                     </ul>
+                    <p className="package-footnote">*Group classes require a minimum of 3 couples.</p>
                     <div className="package-meta">
                       <div>
                         <p className="package-meta-label">Duration</p>
