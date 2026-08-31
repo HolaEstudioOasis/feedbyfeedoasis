@@ -29,7 +29,7 @@ function PrenatalServices() {
             <section className="page-hero">
               <div className="container">
                 <h1>Prenatal Support</h1>
-                <p className="lead">Feel informed, prepared, and confident before your baby's arrival.</p>
+                <p className="lead">Prepare for feeding before your baby arrives. Know what to expect, what's normal, and when to ask for help — before you're doing it on very little sleep.</p>
               </div>
             </section>
 
