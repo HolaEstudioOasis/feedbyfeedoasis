@@ -4,8 +4,8 @@ import prenatal1Asset from "@/assets/prenatal-1.webp.asset.json";
 import prenatal2Asset from "@/assets/prenatal-2.webp.asset.json";
 import prenatal3Asset from "@/assets/prenatal-3.webp.asset.json";
 
-const title = "Prenatal Services | Feed by Feed";
-const description = "Feel informed, prepared, and confident before your baby's arrival with Feed by Feed's prenatal breastfeeding services.";
+const title = "Prenatal Support | Feed by Feed";
+const description = "Prepare for feeding before your baby arrives. Know what to expect, what's normal, and when to ask for help — before you're doing it on very little sleep.";
 
 export const Route = createFileRoute("/services/prenatal-services")({
   head: () => ({
@@ -28,8 +28,8 @@ function PrenatalServices() {
         {/* Hero */}
             <section className="page-hero">
               <div className="container">
-                <h1>Prenatal Services</h1>
-                <p className="lead">Feel informed, prepared, and confident before your baby's arrival.</p>
+                <h1>Prenatal Support</h1>
+                <p className="lead">Prepare for feeding before your baby arrives. Know what to expect, what's normal, and when to ask for help — before you're doing it on very little sleep.</p>
               </div>
             </section>
 
@@ -41,13 +41,16 @@ function PrenatalServices() {
                   <div className="package-content">
                     <h2>Private Prenatal Breastfeeding Consultation</h2>
                     <p className="package-tag">In home</p>
-                    <p className="package-desc">A personalized in-home prenatal breastfeeding consultation. We'll discuss what to expect during the first days, address your questions, and create a plan that supports your feeding goals.</p>
+                    <p className="package-desc">Breastfeeding preparation, pumping and feeding planning tailored to your goals. We'll discuss what to expect during the first days, address your questions, and create a plan that supports your feeding goals.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
-                      <li>How breastfeeding works during the first days after birth</li>
-                      <li>Practical latch and positioning techniques for a comfortable start</li>
                       <li>What to expect as your milk supply develops</li>
+                      <li>How to know baby is getting enough</li>
+                      <li>Newborn feeding cues</li>
+                      <li>Latch fundamentals</li>
                       <li>How to prepare for common breastfeeding challenges</li>
+                      <li>Partner and support-person role</li>
+                      <li>Pumping and bottle planning when relevant</li>
                     </ul>
                     <div className="package-meta">
                       <div>
@@ -70,14 +73,16 @@ function PrenatalServices() {
                   <div className="package-content">
                     <h2>Private Prenatal Breastfeeding Consultation</h2>
                     <p className="package-tag">Virtual</p>
-                    <p className="package-desc">The same comprehensive prenatal breastfeeding consultation offered virtually, giving you the flexibility to prepare for your baby's arrival from anywhere.</p>
+                    <p className="package-desc">Prepare from home, wherever you are. We'll cover the same key feeding foundations, answer your questions, and build a plan around your goals, medical history and support system.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
-                      <li>Personalized breastfeeding preparation</li>
-                      <li>Latch and positioning guidance</li>
-                      <li>Milk supply expectations</li>
-                      <li>Newborn feeding during the first days</li>
-                      <li>Recommendations tailored to your family's goals and medical history</li>
+                      <li>What to expect as your milk supply develops</li>
+                      <li>How to know baby is getting enough</li>
+                      <li>Newborn feeding cues</li>
+                      <li>Latch fundamentals</li>
+                      <li>How to prepare for common breastfeeding challenges</li>
+                      <li>Partner and support-person role</li>
+                      <li>Pumping and bottle planning when relevant</li>
                     </ul>
                     <div className="package-meta">
                       <div>
@@ -100,7 +105,7 @@ function PrenatalServices() {
                   <div className="package-content">
                     <h2>Prenatal Breastfeeding Class</h2>
                     <p className="package-tag">Group session</p>
-                    <p className="package-desc">An interactive class for expecting parents that provides the knowledge and confidence to begin breastfeeding with realistic expectations.</p>
+                    <p className="package-desc">An interactive class for expecting parents that provides the knowledge and confidence to begin breastfeeding with realistic expectations. Partners and support people are welcome.</p>
                     <h3 className="package-list-heading">What You'll Learn</h3>
                     <ul className="package-list">
                       <li>How breastfeeding works during the first days after birth</li>
@@ -109,6 +114,7 @@ function PrenatalServices() {
                       <li>How to recognize newborn feeding cues</li>
                       <li>How your partner can support your breastfeeding goals</li>
                     </ul>
+                    <p className="package-footnote">*Group classes require a minimum of 3 couples.</p>
                     <div className="package-meta">
                       <div>
                         <p className="package-meta-label">Duration</p>
@@ -132,7 +138,7 @@ function PrenatalServices() {
             {/* Additional Notes */}
             <section className="notes section">
               <div className="container">
-                <h2>Additional Notes</h2>
+                <h2>Good to know</h2>
                 <div className="notes-grid">
                   <div className="note-card">
                     <p>Travel fees may apply for home visits outside central Toronto.</p>
@@ -141,7 +147,10 @@ function PrenatalServices() {
                     <p>Weekend and evening appointments may be available upon request.</p>
                   </div>
                   <div className="note-card">
-                    <p>Payment can be made by cash or e-transfer.</p>
+                    <p>We accept all major credit cards, e-transfer, wire transfers, and cash.</p>
+                  </div>
+                  <div className="note-card">
+                    <p>Our services may be covered by some private insurance plans, extended health benefits, or a Health Spending Account.</p>
                   </div>
                 </div>
               </div>
@@ -158,7 +167,7 @@ function PrenatalServices() {
                   <article className="service-nav-card">
                     <h3>Need support after your baby arrives?</h3>
                     <p>Breastfeeding and infant feeding support for latch, milk supply, pumping, bottle feeding, and other feeding concerns.</p>
-                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation Consultations →</a>
+                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation &amp; Feeding Consultations →</a>
                   </article>
                   <article className="service-nav-card">
                     <h3>Looking for ongoing support?</h3>

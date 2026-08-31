@@ -29,7 +29,7 @@ function Packages() {
             <section className="page-hero">
               <div className="container">
                 <h1>Bundles</h1>
-                <p className="lead">Lactation and infant feeding support bundles combining prenatal preparation, postpartum consultations, and follow-up care.</p>
+                <p className="lead">Ongoing support so you don't have to start from scratch at every stage. Choose a bundle if you want someone who already knows your goals, your baby and your feeding story.</p>
               </div>
             </section>
 
@@ -47,8 +47,8 @@ function Packages() {
                       <li>1 private in-home prenatal breastfeeding consultation</li>
                       <li>1 initial lactation consultation in-home or hospital</li>
                       <li>1 virtual follow-up consultation</li>
-                      <li>Unlimited text and email support throughout care</li>
-                      <li>Complimentary 15-minute follow-up call</li>
+                      <li>Messaging support between your included visits, until 2 weeks after your final included visit, with replies during business hours.</li>
+                      <li>15-minute check-in phone call</li>
                       <li>Follow-up can be used for pumping, bottle introduction, starting solids, or gentle weaning</li>
                       <li>In-home follow-up upgrade available for +$75 CAD</li>
                     </ul>
@@ -75,8 +75,8 @@ function Packages() {
                       <li>1 private virtual prenatal breastfeeding consultation</li>
                       <li>1 initial lactation consultation in-home or hospital</li>
                       <li>1 virtual follow-up consultation</li>
-                      <li>Unlimited text and email support throughout care</li>
-                      <li>Complimentary 15-minute follow-up call</li>
+                      <li>Messaging support between your included visits, until 2 weeks after your final included visit, with replies during business hours.</li>
+                      <li>15-minute check-in phone call</li>
                       <li>Follow-up can be used for pumping, bottle introduction, starting solids, or gentle weaning</li>
                     </ul>
                     <div className="package-meta">
@@ -95,13 +95,13 @@ function Packages() {
                 <article className="package-card">
                   <div className="package-content">
                     <h2>Postpartum Support Bundle</h2>
-                    <p className="package-desc">Ongoing lactation and infant feeding support for families who are already navigating the early days and want continued guidance as their feeding journey develops.</p>
+                    <p className="package-desc">For families who want more than a one-time visit. We'll start with a full feeding assessment, then reconnect to adjust the plan as things change.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
                       <li>1 initial lactation consultation in-home or virtual</li>
                       <li>1 in-home or virtual follow-up consultation</li>
-                      <li>Unlimited text and email support throughout care</li>
-                      <li>Complimentary 15-minute follow-up call</li>
+                      <li>Messaging support between your included visits, until 2 weeks after your final included visit, with replies during business hours.</li>
+                      <li>15-minute check-in phone call</li>
                       <li>Follow-up can be used for pumping, bottle introduction, starting solids, or gentle weaning</li>
                     </ul>
                     <div className="package-meta">
@@ -123,7 +123,7 @@ function Packages() {
             {/* Additional Notes */}
             <section className="notes section">
               <div className="container">
-                <h2>Additional Notes</h2>
+                <h2>Good to know</h2>
                 <div className="notes-grid">
                   <div className="note-card">
                     <p>Travel fees may apply for home visits outside central Toronto.</p>
@@ -132,7 +132,10 @@ function Packages() {
                     <p>Weekend and evening appointments may be available upon request.</p>
                   </div>
                   <div className="note-card">
-                    <p>Payment can be made by cash or e-transfer.</p>
+                    <p>We accept all major credit cards, e-transfer, wire transfers, and cash.</p>
+                  </div>
+                  <div className="note-card">
+                    <p>Our services may be covered by some private insurance plans, extended health benefits, or a Health Spending Account.</p>
                   </div>
                 </div>
               </div>
@@ -149,12 +152,12 @@ function Packages() {
                   <article className="service-nav-card">
                     <h3>Still preparing for baby's arrival?</h3>
                     <p>Explore prenatal breastfeeding consultations and classes to help you feel ready before birth.</p>
-                    <a href="/services/prenatal-services" className="btn btn-outline">Explore Prenatal Services →</a>
+                    <a href="/services/prenatal-services" className="btn btn-outline">Explore Prenatal Support →</a>
                   </article>
                   <article className="service-nav-card">
                     <h3>Already navigating feeding?</h3>
                     <p>Get support with breastfeeding, pumping, milk supply, latch, bottle feeding, and other feeding concerns.</p>
-                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation Consultations →</a>
+                    <a href="/services/lactation-consultations" className="btn btn-outline">Explore Lactation &amp; Feeding Consultations →</a>
                   </article>
                 </div>
               </div>
