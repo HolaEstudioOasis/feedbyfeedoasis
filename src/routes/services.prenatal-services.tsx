@@ -5,7 +5,7 @@ import prenatal2Asset from "@/assets/prenatal-2.webp.asset.json";
 import prenatal3Asset from "@/assets/prenatal-3.webp.asset.json";
 
 const title = "Prenatal Support | Feed by Feed";
-const description = "Feel informed, prepared, and confident before your baby's arrival with Feed by Feed's prenatal breastfeeding services.";
+const description = "Prepare for feeding before your baby arrives. Know what to expect, what's normal, and when to ask for help — before you're doing it on very little sleep.";
 
 export const Route = createFileRoute("/services/prenatal-services")({
   head: () => ({
