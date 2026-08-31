@@ -61,7 +61,7 @@ function Index() {
                 </div>
                 <div className="intro-content">
                   <p className="eyebrow">Feeding your baby can come with more questions than you expected.</p>
-                  <h2>Hi, I'm Alicia. I help feeding feel less overwhelming.</h2>
+                  <h2>Hi, I'm Alicia, and I'm here to help feeding feel less overwhelming.</h2>
                   <p className="lead">After navigating my own feeding challenges with my two boys, I know how hard it can feel when feeding doesn't go the way you expected. I realized no family should have to walk this path alone or feel judged. As an IBCLC and nutrition professional, I'm here to help you understand what's happening and find a realistic plan that works for your baby and your family.</p>
 
                   <a href="/about" className="btn btn-primary">Get to Know Me</a>
@@ -167,7 +167,7 @@ function Index() {
                       <div className="accordion-panel-inner">
                         <div className="faq-entry">
                           <h4 className="faq-question">3. When should we book a lactation consultation?</h4>
-                          <p className="faq-answer">You do not need to wait until there is a problem to get support.<br />Feeding is a new skill for both parent and baby. Prenatal support can help you feel more prepared, understand what to expect, know when to ask for help, and protect your feeding goals from the start.<br />You can also book anytime feeding feels painful, confusing, stressful, or not how you hoped it would feel. We can help with painful latch, nipple damage, low milk supply concerns, pumping, bottle feeding, supplementation, slow feeds, tongue tie concerns, introducing bottles, returning to work, solids, and weaning.</p>
+                          <p className="faq-answer">You don't need to wait until feeding feels difficult.<br />Feeding is a new skill for both parent and baby. Prenatal support can help you feel more prepared, understand what to expect, know when to ask for help, and protect your feeding goals from the start.<br />You can also book anytime feeding feels painful, confusing, stressful, or not how you hoped it would feel. We can help with painful latch, nipple damage, low milk supply concerns, pumping, bottle feeding, supplementation, slow feeds, tongue tie concerns, introducing bottles, returning to work, solids, and weaning.</p>
                           <h4 className="faq-question">4. Do you offer virtual and in-home lactation support?</h4>
                           <p className="faq-answer">Yes. Feed by Feed offers virtual lactation consultations across Canada and internationally. We also offer in-home and in-hospital lactation support in Toronto and the GTA, depending on availability and location.<br />Virtual visits can be helpful for prenatal support, follow-ups, pumping, bottle feeding, milk supply, and troubleshooting. Home visits are helpful when you want hands-on support in your own space.</p>
                           <h4 className="faq-question">5. What happens during a consultation?</h4>
@@ -209,7 +209,7 @@ function Index() {
                       <div className="accordion-panel-inner">
                         <div className="faq-entry">
                           <h4 className="faq-question">9. Are your services covered by insurance?</h4>
-                          <p className="faq-answer">Our services are not directly covered by OHIP, but they may be covered by some private insurances, extended health benefits, or a Health Spending Account. Coverage depends on your individual plan, so we recommend checking with your insurance provider before booking.</p>
+                          <p className="faq-answer">Our services are not directly covered by OHIP, but they may be covered by some private insurance plans, extended health benefits, or a Health Spending Account. Coverage depends on your individual plan, so we recommend checking with your insurance provider before booking.</p>
                           <h4 className="faq-question">10. What payment methods do you accept?</h4>
                           <p className="faq-answer">We accept all major credit card, e-transfer, wire transfers, and cash.</p>
                         </div>

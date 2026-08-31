@@ -29,7 +29,7 @@ function Packages() {
             <section className="page-hero">
               <div className="container">
                 <h1>Bundles</h1>
-                <p className="lead">Lactation and infant feeding support bundles combining prenatal preparation, postpartum consultations, and follow-up care.</p>
+                <p className="lead">Ongoing support so you don't have to start from scratch at every stage. Choose a bundle if you want someone who already knows your goals, your baby and your feeding story.</p>
               </div>
             </section>
 
@@ -47,8 +47,8 @@ function Packages() {
                       <li>1 private in-home prenatal breastfeeding consultation</li>
                       <li>1 initial lactation consultation in-home or hospital</li>
                       <li>1 virtual follow-up consultation</li>
-                      <li>Unlimited text and email support throughout care</li>
-                      <li>Complimentary 15-minute follow-up call</li>
+                      <li>Messaging support between your included visits, until 2 weeks after your final included visit, with replies during business hours.</li>
+                      <li>15-minute check-in phone call</li>
                       <li>Follow-up can be used for pumping, bottle introduction, starting solids, or gentle weaning</li>
                       <li>In-home follow-up upgrade available for +$75 CAD</li>
                     </ul>
@@ -75,8 +75,8 @@ function Packages() {
                       <li>1 private virtual prenatal breastfeeding consultation</li>
                       <li>1 initial lactation consultation in-home or hospital</li>
                       <li>1 virtual follow-up consultation</li>
-                      <li>Unlimited text and email support throughout care</li>
-                      <li>Complimentary 15-minute follow-up call</li>
+                      <li>Messaging support between your included visits, until 2 weeks after your final included visit, with replies during business hours.</li>
+                      <li>15-minute check-in phone call</li>
                       <li>Follow-up can be used for pumping, bottle introduction, starting solids, or gentle weaning</li>
                     </ul>
                     <div className="package-meta">
@@ -95,13 +95,13 @@ function Packages() {
                 <article className="package-card">
                   <div className="package-content">
                     <h2>Postpartum Support Bundle</h2>
-                    <p className="package-desc">Ongoing lactation and infant feeding support for families who are already navigating the early days and want continued guidance as their feeding journey develops.</p>
+                    <p className="package-desc">For families who want more than a one-time visit. We'll start with a full feeding assessment, then reconnect to adjust the plan as things change.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
                       <li>1 initial lactation consultation in-home or virtual</li>
                       <li>1 in-home or virtual follow-up consultation</li>
-                      <li>Unlimited text and email support throughout care</li>
-                      <li>Complimentary 15-minute follow-up call</li>
+                      <li>Messaging support between your included visits, until 2 weeks after your final included visit, with replies during business hours.</li>
+                      <li>15-minute check-in phone call</li>
                       <li>Follow-up can be used for pumping, bottle introduction, starting solids, or gentle weaning</li>
                     </ul>
                     <div className="package-meta">
