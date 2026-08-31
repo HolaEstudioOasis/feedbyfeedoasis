@@ -5,7 +5,7 @@ import lactation2 from "@/assets/lactation-2.webp.asset.json";
 import lactation3 from "@/assets/lactation-3.webp.asset.json";
 
 const title = "Lactation & Feeding Consultations | Feed by Feed";
-const description = "Support for families navigating breastfeeding, pumping, bottle feeding, and other feeding challenges.";
+const description = "A full feeding assessment for families who need support with breastfeeding, pumping, milk supply, bottle feeding, supplementation, pain, oral function or a feeding plan that just isn't working the way they hoped.";
 
 export const Route = createFileRoute("/services/lactation-consultations")({
   head: () => ({
@@ -39,17 +39,20 @@ function LactationConsultations() {
 
                 <article className="package-card">
                   <div className="package-content">
-                    <h2>Initial Lactation Consultation</h2>
+                    <h2>Initial Lactation &amp; Feeding Consultation</h2>
                     <p className="package-tag">In home or hospital</p>
-                    <p className="package-desc">A comprehensive lactation consultation for families who need support with breastfeeding, milk supply, latch, or other feeding concerns.</p>
+                    <p className="package-desc">A full feeding assessment for families who need support with breastfeeding, pumping, milk supply, bottle feeding, supplementation, pain, oral function or a feeding plan that just isn't working the way they hoped.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
-                      <li>Feeding history and assessment</li>
-                      <li>Latch and positioning assessment</li>
-                      <li>Baby's oral function and milk transfer</li>
-                      <li>Review of feeding goals and concerns</li>
-                      <li>Personalized feeding plan</li>
-                      <li>Two weeks of text and email support</li>
+                      <li>Feeding assessment at breast or bottle</li>
+                      <li>Milk transfer assessment</li>
+                      <li>Pumping and flange fit</li>
+                      <li>Oral function assessment</li>
+                      <li>Breast and nipple concerns</li>
+                      <li>Supplementation and milk supply</li>
+                      <li>Your baby's feeding behaviour</li>
+                      <li>A clear plan with next steps</li>
+                      <li>Two weeks of follow-up support</li>
                     </ul>
                     <div className="package-meta">
                       <div>
@@ -70,9 +73,9 @@ function LactationConsultations() {
 
                 <article className="package-card">
                   <div className="package-content">
-                    <h2>Follow-Up Lactation Consultation</h2>
+                    <h2>Follow-Up Lactation &amp; Feeding Consultation | In-Home</h2>
                     <p className="package-tag">In home</p>
-                    <p className="package-desc">A follow-up lactation consultation to review how feeding is progressing and make adjustments based on your baby's needs.</p>
+                    <p className="package-desc">A follow-up lactation consultation to review how feeding is progressing and make adjustments based on your baby's needs. Your follow-up doesn't have to be about the same thing. Use it for breastfeeding, pumping, bottle introduction, starting solids, weaning or a new feeding concern.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
                       <li>Review of feeding progress</li>
@@ -100,9 +103,9 @@ function LactationConsultations() {
 
                 <article className="package-card">
                   <div className="package-content">
-                    <h2>Follow-Up Lactation Consultation</h2>
+                    <h2>Follow-Up Lactation &amp; Feeding Consultation | Virtual</h2>
                     <p className="package-tag">Virtual</p>
-                    <p className="package-desc">A virtual lactation consultation for families who need ongoing support, troubleshooting, or guidance as their feeding journey changes.</p>
+                    <p className="package-desc">A virtual lactation consultation for families who need ongoing support, troubleshooting, or guidance as their feeding journey changes. Your follow-up doesn't have to be about the same thing. Use it for breastfeeding, pumping, bottle introduction, starting solids, weaning or a new feeding concern.</p>
                     <h3 className="package-list-heading">What's Included</h3>
                     <ul className="package-list">
                       <li>Review of your current feeding concerns</li>
@@ -110,6 +113,7 @@ function LactationConsultations() {
                       <li>Bottle feeding support</li>
                       <li>Support with starting solids or weaning</li>
                       <li>Adjustments to your feeding plan</li>
+                      <li>One week of email support</li>
                     </ul>
                     <div className="package-meta">
                       <div>
